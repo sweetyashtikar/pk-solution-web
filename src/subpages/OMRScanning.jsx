@@ -1,5 +1,18 @@
 import React, { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import {
+  Zap,
+  Target,
+  BarChart3,
+  ClipboardList,
+  Lock,
+  Wallet,
+  Plus,
+  Minus,
+  Printer,
+  Scan,
+  Database,
+  CheckCircle,
+} from "lucide-react";
 
 const faqs = [
   {
@@ -12,17 +25,17 @@ const faqs = [
   },
   {
     q: "How fast can OMR sheets be processed?",
-    a: "Our solution can process thousands of OMR sheets per hour, depending on scanner speed and sheet quality — ideal for large-scale exams."
+    a: "Our solution can process thousands of OMR sheets per hour, depending on scanner speed and sheet quality — ideal for large-scale exams.",
   },
   {
     q: "Can we generate reports and result analysis?",
-    a: "Absolutely. Our system generates scorecards, merit lists, rankings, and graphical reports instantly in PDF or Excel format. "
-   },
+    a: "Absolutely. Our system generates scorecards, merit lists, rankings, and graphical reports instantly in PDF or Excel format. ",
+  },
   {
     q: "Can the software handle negative marking and optional questions?",
-    a: "Yes, the result processing engine is customizable to match any marking scheme — including negative marking, sectional scoring, or optional questions."
+    a: "Yes, the result processing engine is customizable to match any marking scheme — including negative marking, sectional scoring, or optional questions.",
   },
-  ];
+];
 
 const steps = [
   {
@@ -199,7 +212,7 @@ export default function OMRScanning() {
               accuracy and quick turnaround time.
             </p>
 
-            <button className="bg-[#FF7A1A] text-white px-5 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105">
+            <button className="bg-orange-600  text-white px-5 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105">
               Get Started for Free
             </button>
           </div>
@@ -213,66 +226,60 @@ export default function OMRScanning() {
       <MultigraphicsSection />
 
       {/* Top Features Section */}
-           <section
-        className="py-12 px-4 sm:px-6 lg:px-8"
-        style={{
-          background: "linear-gradient(135deg, #48B1E4 0%, #1B3376 100%)",
-        }}
-      >
+      <section className="py-16 px-4 sm:px-6 lg:px-8  bg-[#1a498b]">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Top Features of OMR Scanning & Result Processing Software
             </h2>
-            <p className="text-lg text-gray-200 max-w-3xl mx-auto">
-Streamline Your Evaluations with a Fast, Accurate & Scalable OMR Processing Solution
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Streamline Your Evaluations with a Fast, Accurate & Scalable OMR
+              Processing Solution
             </p>
           </div>
 
           {/* Process Steps Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {steps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="flex flex-col items-start text-left">
-                  {/* Icon with background */}
-                  <div className="bg-orange-600 p-4 rounded-2xl mb-4 relative z-10">
-                    {step.icon}
-                  </div>
-
-                  {/* Large background number */}
-                  <div className="absolute top-0 right-0 text-[100px] font-bold text-[#E8E8E8] opacity-20 leading-none select-none pointer-events-none">
-                    {step.number}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold mb-3 text-white relative z-10">
-                    {step.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-200 text-sm relative z-10">
-                    {step.description}
-                  </p>
+              <div
+                key={index}
+                className="
+        relative flex flex-col items-center text-center
+        bg-white rounded-2xl p-8 shadow-xl
+        text-[#1a498b]
+      "
+              >
+                {/* Icon Box */}
+                <div className="bg-orange-600 p-4 rounded-2xl mb-4 relative z-10 flex items-center justify-center shadow-lg">
+                  {step.icon}
                 </div>
+
+                {/* Large Number Behind */}
+                <div className="absolute top-0 text-[90px] md:text-[180px] font-bold opacity-10 leading-none select-none pointer-events-none">
+                  {step.number}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold mb-3 relative z-10">
+                  {step.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm relative z-10 max-w-xs mx-auto">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-
       {/* How It's Done Section */}
       <HowItsDone />
 
       {/* FAQ Section */}
-
-      <section
-        className="py-12 px-4 sm:px-6 lg:px-8"
-        style={{
-          background: "linear-gradient(135deg, #48B1E4 0%, #1B3376 100%)",
-        }}
-      >
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#1a498b]">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-center text-4xl font-bold mb-8 text-white">
             Frequently Asked Questions
@@ -330,8 +337,9 @@ Streamline Your Evaluations with a Fast, Accurate & Scalable OMR Processing Solu
           )}
         </div>
       </section>
+
       {/* common code */}
-      <div className="w-full bg-gray-100 py-20 flex flex-col items-center text-center px-4">
+      <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-[#1a498b] mb-6">
           Need Secure & Reliable Examination Services?
         </h2>
@@ -343,11 +351,11 @@ Streamline Your Evaluations with a Fast, Accurate & Scalable OMR Processing Solu
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-600 text-white font-semibold text-lg px-6 py-3 rounded-lg transition">
-            Join Us
+          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+            Explore
           </button>
 
-          <button className="bg-orange-600 hover:bg-orange-600 text-white font-semibold text-lg px-6 py-3 rounded-lg transition">
+          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
             Contact Us
           </button>
         </div>
@@ -358,83 +366,99 @@ Streamline Your Evaluations with a Fast, Accurate & Scalable OMR Processing Solu
 
 function WhatIsOMR() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a498b]">
-              What is OMR Scanning & Result Processing?
-            </h2>
-            <p className="text-lg text-gray-700 mb-4">
-              OMR Scanning (Optical Mark Recognition) is the process of
-              capturing marked data from OMR sheets used in exams, surveys, and
-              evaluations.
-            </p>
-            <p className="text-lg text-gray-700 mb-4">
-              Candidates fill bubbles, which are then scanned using OMR software
-              or scanners to read responses with high accuracy.
-            </p>
-            <p className="text-lg text-gray-700 mb-4">
-              Result Processing involves evaluating these responses using
-              automated systems to generate scorecards, merit lists, rankings,
-              and analytics—saving time, reducing errors, and increasing
-              transparency.
-            </p>
-            <p className="text-lg text-gray-700">
-              Ideal for schools, universities, recruitment exams, and government
-              assessments.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500"
-                alt="OMR Scanning Process"
-                className="rounded-lg shadow-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a498b]/20 to-transparent rounded-lg"></div>
-            </div>
-          </div>
-        </div>
+<section
+  className="py-12 px-4 sm:px-6 lg:px-8"
+  style={{ backgroundColor: "#1a498b" }}
+>
+  <div className="max-w-7xl mx-auto"> 
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+
+      {/* LEFT SIDE CARD */}
+      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 text-center mx-auto max-w-xl">
+        <h2
+          className="text-3xl md:text-4xl font-extrabold mb-6"
+          style={{ color: "#1a498b" }}
+        >
+          What is OMR Scanning & Result Processing?
+        </h2>
+
+        <p className="text-lg mb-4" style={{ color: "black" }}>
+          OMR Scanning (Optical Mark Recognition) is the process of capturing
+          marked data from OMR sheets used in exams, surveys, and evaluations.
+        </p>
+
+        <p className="text-lg mb-4" style={{ color: "black" }}>
+          Candidates fill bubbles, which are then scanned using OMR software or
+          scanners to read responses with high accuracy.
+        </p>
+
+        <p className="text-lg mb-4" style={{ color: "black" }}>
+          Result Processing evaluates these responses to generate scorecards,
+          merit lists, rankings, and analytics.
+        </p>
+
+        <p className="text-lg" style={{ color: "black" }}>
+          Ideal for schools, universities, recruitment exams, and government
+          assessments.
+        </p>
       </div>
-    </section>
+
+      {/* RIGHT SIDE IMAGE */}
+   <div className="flex justify-center">
+  <div className="relative w-full max-w-2xl"> 
+    <img
+      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900"
+      alt="OMR Scanning Process"
+      className="rounded-2xl shadow-2xl w-full h-auto"
+    />
+
+    <div className="absolute inset-0 bg-gradient-to-t from-[#1a498b]/30 to-transparent rounded-2xl"></div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+
   );
 }
 
 function MultigraphicsSection() {
   const features = [
     {
-      icon: "⚡",
+      icon: <Zap size={40} />,
       title: "High-Speed Evaluation",
       description:
         "Scan and evaluate thousands of OMR sheets per hour, reducing manual workload and delays.",
     },
     {
-      icon: "🎯",
+      icon: <Target size={40} />,
       title: "99.9% Accuracy",
       description:
         "Eliminate human errors with automated OMR result processing, ensuring reliable outcomes.",
     },
     {
-      icon: "📊",
+      icon: <BarChart3 size={40} />,
       title: "Instant Reports & Analytics",
       description:
         "Get detailed scorecards, merit lists, and performance analytics in minutes.",
     },
     {
-      icon: "📋",
+      icon: <ClipboardList size={40} />,
       title: "Ideal for All Assessments",
       description:
         "Perfect for competitive exams, academic tests, recruitment exams, and surveys.",
     },
     {
-      icon: "🔒",
+      icon: <Lock size={40} />,
       title: "Data Security & Compliance",
       description:
         "Secure data handling with ISO-certified systems and encrypted workflows.",
     },
     {
-      icon: "💰",
+      icon: <Wallet size={40} />,
       title: "Cost & Time Efficient",
       description:
         "Cut costs on manpower, logistics, and manual data entry with end-to-end automation.",
@@ -445,35 +469,39 @@ function MultigraphicsSection() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white border-2 border-[#1a498b] rounded-xl p-6 hover:shadow-lg transition"
+                className="bg-[#1a498b] text-white rounded-xl p-6 flex flex-col items-center text-center hover:shadow-xl transition"
               >
-                <div className="text-4xl mb-3">{feature.icon}</div>
-                <h3 className="text-lg font-bold text-[#1a498b] mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
+                <div className="text-5xl mb-3">{feature.icon}</div>
+
+                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+
+                <p className="text-sm opacity-90">{feature.description}</p>
               </div>
             ))}
           </div>
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a498b]">
+
+          <div className="text-center mx-auto">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-[#1a498b]">
               Multigraphics: OMR Sheet Checking & Evaluation System
             </h2>
+
             <p className="text-lg text-gray-700 mb-4">
               Multigraphics offers high-speed OMR scanning and result processing
               solutions trusted by schools, universities, recruitment boards,
               and government organizations.
             </p>
+
             <p className="text-lg text-gray-700">
               With over 25 years of expertise, we deliver accurate, secure, and
               scalable evaluation systems that streamline assessments, automate
               result generation, and ensure timely reporting.
             </p>
-            <div className="mt-6">
+
+            <div className="mt-6 flex justify-center">
               <img
                 src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400"
                 alt="OMR Scanner System"
@@ -487,58 +515,56 @@ function MultigraphicsSection() {
   );
 }
 
-
 function HowItsDone() {
   const steps = [
     {
-      icon: "🖨️",
+      icon: <Printer size={40} />,
       title: "OMR Sheet Design & Printing",
       description:
         "Design custom OMR sheets using predefined templates or client-specific layouts. Print them using regular printers.",
     },
     {
-      icon: "📝",
+      icon: <ClipboardList size={40} />,
       title: "Sheet Distribution & Response Marking",
       description:
         "Distribute printed sheets to candidates for marking responses in exams, surveys, or feedback.",
     },
     {
-      icon: "📷",
+      icon: <Scan size={40} />,
       title: "OMR Sheet Scanning",
       description:
         "Scan completed OMR sheets using high-speed scanners or compatible flatbed scanners.",
     },
     {
-      icon: "💾",
+      icon: <Database size={40} />,
       title: "Automated Data Extraction",
       description:
         "The OMR software reads marked bubbles, extracts data, and flags any discrepancies or multiple markings.",
     },
     {
-      icon: "✅",
+      icon: <CheckCircle size={40} />,
       title: "Result Processing",
       description:
         "Apply custom marking logic (including negative marking, optional questions, etc.) and calculate scores.",
     },
     {
-      icon: "📊",
+      icon: <BarChart3 size={40} />,
       title: "Report Generation & Export",
       description:
         "Generate detailed scorecards, rankings, analytics, and export results in Excel, PDF, or other formats.",
     },
   ];
-
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#1a498b]">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-[#1a498b]">
           OMR Sheet Scanning to Result Generation: How It's Done
         </h2>
         <p className="text-center text-gray-600 mb-12 text-lg">
           Power Your Evaluations with a Fast, Accurate & Scalable OMR Processing
           System
         </p>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-2 items-center">
           <div>
             <img
               src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500"
@@ -546,16 +572,24 @@ function HowItsDone() {
               className="rounded-lg shadow-xl"
             />
           </div>
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {steps.map((step, index) => (
-              <div key={index} className="flex gap-4">
-                <div className="text-3xl flex-shrink-0">{step.icon}</div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#1a498b] mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600">{step.description}</p>
+              <div
+                key={index}
+                className="bg-[#1a498b] rounded-lg p-4 text-white flex flex-col items-center text-center shadow-md"
+              >
+                {/* Extra Small Icon */}
+                <div className="bg-orange-600 p-1.5 rounded-full mb-2 text-white flex items-center justify-center">
+                  {React.cloneElement(step.icon, { className: "w-6 h-6" })}
                 </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold mb-1">{step.title}</h3>
+
+                {/* Description */}
+                <p className="text-white/90 text-xs leading-snug">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>

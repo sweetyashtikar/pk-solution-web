@@ -137,7 +137,7 @@ export default function ExamPlatformLanding() {
   const solutions = [
     {
       image:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop",
+        "/young-activists-taking-action.jpg",
       title: "Universities & Colleges",
     },
     {
@@ -245,72 +245,45 @@ export default function ExamPlatformLanding() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
-<section
-  className="pt-6 pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat relative min-h-[200px]"
-  style={{ backgroundImage: "url('/Schoollog Exam.jpg')" }}
->
-  <div className="absolute inset-0 bg-black/50"></div>  {/* Increased opacity here */}
-  <div className="relative max-w-7xl mx-auto min-h-screen flex items-center justify-center px-4">
-    <div className="max-w-3xl bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-4 overflow-auto text-center">
-      <h1
-        className="text-4xl md:text-4xl font-bold leading-tight mb-4"
-        style={{ color: "#1a498b" }}
+
+      <section
+        className="pt-10 pb-24 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          backgroundImage: "url('/Schoollog Exam.jpg')",
+        }}
       >
-        Conduct Seamless, Secure & Scalable Online Exams with Our Platform
-      </h1>
-      <p
-        className="text-lg mb-6 leading-snug font-bold"
-        style={{ color: "black" }}
-      >
-        Streamline your exam process with our robust Online Examination.
-        Deliver objective or descriptive tests, conduct large-scale
-        assessments, generate instant results, and ensure complete data
-        confidentiality—without AI proctoring. Trusted by top
-        universities, PSUs, and corporates.
-      </p>
-      <button className="bg-[#FF7A1A] text-white px-4 py-2 rounded-full text-sm font-semibold transition shadow-lg hover:shadow-xl transform hover:scale-105 font-bold inline-block">
-        Get Started for Free
-      </button>
-    </div>
-  </div>
-</section>
-      {/* Stats Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-teal-700 mb-6">
-              Our Expertise, Reach, Performance, Trust & Reliability
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              Our expertise reflects deep industry knowledge, proven capability,
-              and trusted performance. Our presence demonstrates reliable reach,
-              strong market positioning, and consistent delivery across diverse
-              sectors with excellence and credibility.
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/35"></div>
+
+        {/* Centered content */}
+        <div className="relative max-w-7xl mx-auto flex justify-center items-center min-h-[60vh]">
+          {/* Content Box */}
+          <div className="max-w-xl bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-10 flex flex-col justify-center text-center">
+            <h1
+              className="text-xl md:text-3xl font-extrabold leading-tight mb-6"
+              style={{ color: "#1a498b" }}
+            >
+              Conduct Seamless, Secure & Scalable Online Exams with Our Platform
+            </h1>
+
+            <p className="text-lg leading-relaxed mb-8 font-medium text-gray-800">
+              Streamline your exam process with our robust Online Examination.
+              Deliver objective or descriptive tests, conduct large-scale
+              assessments, generate instant results, and ensure complete data
+              confidentiality—without AI proctoring. Trusted by top
+              universities, PSUs, and corporates.
             </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-gradient-to-br from-teal-50 to-blue-50 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-105"
-              >
-                <div className="text-4xl font-bold text-teal-700 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
+
+            <button className="bg-orange-600 text-white px-4 py-2 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105 w-max mx-auto">
+              Get Started for Free
+            </button>
           </div>
         </div>
       </section>
 
       {/* What is Online Exam Section */}
-      <section
-        className="py-16"
-        style={{
-          background: "linear-gradient(to bottom right, #e7f1f5, #d0e2e8)",
-        }}
-      >
+
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative">
@@ -321,24 +294,21 @@ export default function ExamPlatformLanding() {
               />
             </div>
             <div className="space-y-4">
-              <div
-                className="text-xs font-semibold uppercase tracking-wide"
+              <h2
+                className="text-4xl font-extrabold text-center"
                 style={{ color: "#1a498b" }}
               >
-                What is Online Exam?
-              </div>
-              <h2 className="text-3xl font-bold" style={{ color: "#1a498b" }}>
                 Conduct Tests with Real-Time Monitoring, Instant Results, and
                 Zero Manual Effort.
               </h2>
-              <p className="text-sm" style={{ color: "#1a498b" }}>
+              <p className="text-sm text-center" style={{ color: "black" }}>
                 An Online Examination is a secure digital method for conducting
                 tests where candidates can appear either remotely or at
                 designated centers using computers or mobile devices. It
                 eliminates the need for physical paperwork, enabling a smoother,
                 scalable, and more efficient testing process.
               </p>
-              <p className="text-sm" style={{ color: "#1a498b" }}>
+              <p className="text-sm text-center" style={{ color: "black" }}>
                 Multigraphics' Online Exam system supports multiple question
                 formats including MCQs and descriptive responses, allows
                 randomization, sectional timing, and instant result processing.
@@ -353,19 +323,21 @@ export default function ExamPlatformLanding() {
       </section>
 
       {/* Services Section */}
-      <div className="bg-gray-50 py-20">
+      <div className="py-20" style={{ backgroundColor: "#1a498b" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
+            {/* LEFT SECTION */}
             <div className="space-y-6">
               <h1
-                className="text-4xl font-bold leading-tight"
-                style={{ color: "#1a498b" }}
+                className="text-4xl font-bold leading-tight text-center"
+                style={{ color: "white" }}
               >
                 Comprehensive Online Examination Services
               </h1>
+
               <p
-                className="leading-relaxed font-bold"
-                style={{ color: "black" }}
+                className="leading-relaxed font-bold text-center"
+                style={{ color: "white" }}
               >
                 We offer a full suite of Online Exam services tailored to
                 institutions, corporates, and government agencies. Our platform
@@ -374,30 +346,35 @@ export default function ExamPlatformLanding() {
                 browser lockdown, and real-time monitoring ensuring a seamless
                 experience for both administrators and candidates.
               </p>
+
               <img
                 src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=600&h=450&fit=crop"
                 alt="E-learning platform"
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
+
+            {/* RIGHT CARDS GRID */}
             <div className="grid md:grid-cols-2 gap-4">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-xl flex flex-col items-center text-center shadow-sm border border-[#1a498b]/10 ring-1 ring-[#1a498b]/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                  className="bg-white p-6 rounded-xl flex flex-col items-center text-center shadow-lg border border-[#ffffff]/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="w-14 h-14 bg-teal-50 border-2 border-[#FF7A1A] rounded-full flex items-center justify-center mb-3 text-[#FF7A1A]">
                     {service.icon}
                   </div>
+
                   <h3
                     className="text-lg font-extrabold mb-1"
-                    style={{ color: "#FF7A1A" }}
+                    style={{ color: "#1a498b" }}
                   >
                     {service.title}
                   </h3>
+
                   <p
                     className="text-sm leading-relaxed font-bold"
-                    style={{ color: "#1a498b" }}
+                    style={{ color: "black" }}
                   >
                     {service.description}
                   </p>
@@ -412,11 +389,8 @@ export default function ExamPlatformLanding() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
-              TOP FEATURES
-            </div>
             <h2
-              className="text-4xl font-bold mb-6 max-w-4xl mx-auto"
+              className="text-4xl font-extrabold mb-6 max-w-4xl mx-auto"
               style={{ color: "#1a498b" }}
             >
               Powerful, Secure Testing built for Education, Recruitment and
@@ -427,18 +401,22 @@ export default function ExamPlatformLanding() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-8 text-center rounded-2xl shadow-sm border border-[#1a498b]/10 ring-1 ring-[#1a498b]/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                className="bg-[#1a498b] p-8 text-center rounded-2xl shadow-sm border border-[#1a498b]/10 ring-1 ring-[#1a498b]/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
+                {/* Icon with orange background */}
                 <div className="flex justify-center mb-4">
-                  <div style={{ color: "#FF7A1A" }}>{feature.icon}</div>
+                  <div className="bg-orange-600 w-12 h-12 flex items-center justify-center rounded-full text-white">
+                    {feature.icon}
+                  </div>
                 </div>
-                <h3
-                  className="text-lg font-bold mb-3"
-                  style={{ color: "#1a498b" }}
-                >
+
+                {/* Title */}
+                <h3 className="text-xl font-bold mb-3 text-white">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+
+                {/* Description */}
+                <p className="text-white/90 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -448,21 +426,22 @@ export default function ExamPlatformLanding() {
       </section>
 
       {/* Perfect Solution Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ backgroundColor: "#1a498b" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* HEADING */}
           <div className="text-center mb-12">
-            <h2
-              className="text-4xl font-bold mb-4"
-              style={{ color: "#1a498b" }}
-            >
+            <h2 className="text-4xl font-bold mb-4" style={{ color: "white" }}>
               Perfect Solution for Universities, Corporates & Government Bodies
             </h2>
-            <p className="text-gray-600 max-w-4xl mx-auto">
+
+            <p className="max-w-4xl mx-auto" style={{ color: "white" }}>
               Our Online Exam Software is designed to serve a wide range of
               users who need reliable, scalable, and secure testing
               environments—without AI proctoring.
             </p>
           </div>
+
+          {/* GRID CARDS */}
           <div className="grid md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <div
@@ -489,10 +468,9 @@ export default function ExamPlatformLanding() {
       <section className="py-20 bg-[#F3F7FB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* LEFT SIDE GRID WITH SCROLL – MATCHED CARD STYLE */}
+            {/* LEFT SIDE GRID WITH SCROLL */}
             <div
-              className="p-6 rounded-2xl 
-                   overflow-y-scroll"
+              className="p-6 rounded-2xl overflow-y-scroll"
               style={{
                 maxHeight: "520px",
                 scrollbarWidth: "none",
@@ -508,21 +486,20 @@ export default function ExamPlatformLanding() {
                 {trustReasons.map((reason, index) => (
                   <div
                     key={index}
-                    className="bg-[#F8FAFF] p-4 rounded-xl border border-[#1a498b]/20 shadow-sm 
-                         hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    className="bg-[#1a498b] text-white p-5 rounded-xl flex flex-col items-center text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="w-14 h-14 bg-[#FF7A1A] rounded-full flex items-center justify-center mb-3 text-white text-2xl">
+                    {/* Icon */}
+                    <div className="w-14 h-14 bg-orange-600 rounded-full flex items-center justify-center mb-3 text-white text-2xl">
                       {reason.icon}
                     </div>
 
-                    <h3
-                      className="text-lg font-semibold mb-1"
-                      style={{ color: "#1a498b" }}
-                    >
+                    {/* Heading */}
+                    <h3 className="text-lg font-semibold mb-1">
                       {reason.title}
                     </h3>
 
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    {/* Description */}
+                    <p className="text-white/90 text-sm leading-relaxed">
                       {reason.description}
                     </p>
                   </div>
@@ -530,12 +507,9 @@ export default function ExamPlatformLanding() {
               </div>
             </div>
 
-            {/* RIGHT SIDE TEXT + IMAGE SECTION – SAME DESIGN BOX */}
-            <div className=" p-6 rounded-2xl">
-              <h2
-                className="text-4xl font-bold mb-5"
-                style={{ color: "#1a498b" }}
-              >
+            {/* RIGHT SIDE TEXT + IMAGE */}
+            <div className="p-6 rounded-2xl">
+              <h2 className="text-4xl font-bold mb-5 text-[#1a498b]">
                 Why Top Institutions Trust Our Online Exam Platform
               </h2>
 
@@ -555,17 +529,14 @@ export default function ExamPlatformLanding() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ backgroundColor: "#1a498b" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Title */}
           <div className="text-center mb-16">
-            <h2
-              className="text-4xl font-bold mb-4"
-              style={{ color: "#1a498b" }}
-            >
+            <h2 className="text-4xl font-bold mb-4" style={{ color: "white" }}>
               How Our Online Examination Platform Works
             </h2>
-            <p className="text-gray-600">
+            <p style={{ color: "white" }}>
               Conduct Exams in just a Few Simple Steps—Secure, Smooth and
               Scalable.
             </p>
@@ -584,17 +555,17 @@ export default function ExamPlatformLanding() {
                 </div>
 
                 {/* Card */}
-                <div
-                  className="bg-white p-5 rounded-xl shadow-lg border border-[#1a498b]/30 
-                          hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full"
-                >
+                <div className="bg-white p-5 rounded-xl shadow-lg border border-white/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full">
                   <h3
-                    className="text-xl font-bold mb-2"
+                    className="text-2xl font-extrabold mb-2"
                     style={{ color: "#1a498b" }}
                   >
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#1a498b]/80">
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "#1a498b" }}
+                  >
                     {step.description}
                   </p>
                 </div>
@@ -602,27 +573,17 @@ export default function ExamPlatformLanding() {
             ))}
           </div>
 
-          {/* TIMELINE (Exactly like your image) */}
+          {/* TIMELINE */}
           <div className="relative w-full flex justify-between items-center my-16">
-            {/* Horizontal Line */}
-            <div
-              className="absolute top-1/2 left-0 right-0 h-[2px] 
-                      bg-[#1a768b] -translate-y-1/2"
-            ></div>
+            <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-white -translate-y-1/2"></div>
 
-            {/* Ticks (3 top, 3 bottom) */}
             {[1, 2, 3, 4, 5, 6].map((_, i) => (
               <div
                 key={i}
                 className="relative flex flex-col items-center w-full"
               >
-                {/* Upper ticks for first 3 */}
-                {i < 3 && <div className="w-[2px] h-8 bg-[#1a768b] mb-1"></div>}
-
-                {/* Lower ticks for last 3 */}
-                {i >= 3 && (
-                  <div className="w-[2px] h-8 bg-[#1a768b] mt-1"></div>
-                )}
+                {i < 3 && <div className="w-[2px] h-8 bg-white mb-1"></div>}
+                {i >= 3 && <div className="w-[2px] h-8 bg-white mt-1"></div>}
               </div>
             ))}
           </div>
@@ -640,17 +601,17 @@ export default function ExamPlatformLanding() {
                 </div>
 
                 {/* Card */}
-                <div
-                  className="bg-white p-5 rounded-xl shadow-lg border border-[#1a498b]/30 
-                          hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full"
-                >
+                <div className="bg-white p-5 rounded-xl shadow-lg border border-white/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full">
                   <h3
-                    className="text-xl font-bold mb-2"
+                    className="text-2xl font-extrabold mb-2"
                     style={{ color: "#1a498b" }}
                   >
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#1a498b]/80">
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "#1a498b" }}
+                  >
                     {step.description}
                   </p>
                 </div>
@@ -666,6 +627,28 @@ export default function ExamPlatformLanding() {
           </div>
         </div>
       </section>
+      {/* common code */}
+      <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#1a498b] mb-6">
+          Need Secure & Reliable Examination Services?
+        </h2>
+
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed mb-10">
+          Connect with us to discuss how we can support your institution with
+          end-to-end exam management—from confidential printing to complete
+          result processing.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+            Explore
+          </button>
+
+          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+            Contact Us
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

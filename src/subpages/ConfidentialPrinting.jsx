@@ -193,39 +193,42 @@ export default function ConfidentialPrinting() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <section
-        className="pt-10 pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+        className="pt-10 pb-16 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
         style={{ backgroundImage: "url('/5133768.jpg')" }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/35"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative w-full flex justify-center">
-          {/* Centered Content Box */}
+          {/* Center Content Box */}
           <div
-            className="max-w-3xl min-h-[50vh] bg-white/95 backdrop-blur-md 
-      rounded-3xl shadow-2xl p-10 md:p-12 
-      flex flex-col items-center text-center justify-center"
+            className="w-full max-w-xl sm:max-w-2xl 
+                 bg-white/95 backdrop-blur-md rounded-2xl 
+                 shadow-xl p-6 sm:p-8 md:p-10 
+                 text-center flex flex-col items-center"
           >
             <h1
-              className="text-3xl md:text-4xl font-extrabold leading-tight mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl 
+                   font-extrabold leading-snug mb-5"
               style={{ color: "#1a498b" }}
             >
               Secure & Confidential Printing Solutions for Exams, Government &
               Corporate Needs
             </h1>
 
-            <p className="text-xl leading-relaxed mb-6 font-medium text-gray-800">
+            <p
+              className="text-base sm:text-lg md:text-xl 
+                    leading-relaxed mb-6 font-medium text-gray-800"
+            >
               Delivering high-security printing of question papers, OMR sheets,
-              ballot papers, and more with tamper-proof technology, custom
-              packaging, and end-to-end data confidentiality. Serving
-              universities, government bodies, recruitment agencies, and
-              corporates across India with ISO certified secure printing.
+              ballot papers, and more with tamper-proof technology and full
+              confidentiality.
             </p>
 
             <button
-              className="bg-[#FF7A1A] text-white px-6 py-3 rounded-full 
-        text-lg font-semibold shadow-lg hover:shadow-xl 
-        transition transform hover:scale-105"
+              className="bg-orange-600  text-white px-6 py-3 rounded-full 
+                   text-base sm:text-lg font-bold shadow-lg 
+                   hover:shadow-xl transition transform hover:scale-105"
             >
               Get Started for Free
             </button>
@@ -260,7 +263,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-2">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600  p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -291,7 +294,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-4">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600  p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -324,7 +327,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-4">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600 p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -357,7 +360,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-4">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600 p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -390,7 +393,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-4">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600 p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -423,7 +426,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-4">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600 p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -456,7 +459,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-4">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600 p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -487,7 +490,7 @@ export default function ConfidentialPrinting() {
               style={{ backgroundColor: "#1a498b" }}
             >
               <div className="flex flex-col items-center gap-4">
-                <div className="bg-[#FF7A1A] p-3 rounded-lg">
+                <div className="bg-orange-600 p-3 rounded-lg">
                   <svg
                     className="w-10 h-10"
                     fill="none"
@@ -516,49 +519,49 @@ export default function ConfidentialPrinting() {
       </section>
 
       {/* How Our Confidential Printing Process Section */}
-      <section
-        className="py-12 px-4 sm:px-6 lg:px-8"
-        style={{
-          background: "linear-gradient(135deg, #48B1E4 0%, #1B3376 100%)",
-        }}
-      >
+      <section className="py-16 px-4 sm:px-6 lg:px-8  bg-[#1a498b]">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               How Our Confidential Printing Process Ensures 100% Security
             </h2>
-            <p className="text-lg text-gray-200 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Ensure Exam Integrity with Secure, Confidential & Scalable
               Printing Services
             </p>
           </div>
 
           {/* Process Steps Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {steps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="flex flex-col items-start text-left">
-                  {/* Icon with background */}
-                  <div className="bg-orange-600 p-4 rounded-2xl mb-4 relative z-10">
-                    {step.icon}
-                  </div>
-
-                  {/* Large background number */}
-                  <div className="absolute top-0 right-0 text-[100px] font-bold text-[#E8E8E8] opacity-20 leading-none select-none pointer-events-none">
-                    {step.number}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold mb-3 text-white relative z-10">
-                    {step.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-200 text-sm relative z-10">
-                    {step.description}
-                  </p>
+              <div
+                key={index}
+                className="
+        relative flex flex-col items-center text-center
+        bg-white rounded-2xl p-8 shadow-xl
+        text-[#1a498b]
+      "
+              >
+                {/* Icon Box */}
+                <div className="bg-orange-600 p-4 rounded-2xl mb-4 relative z-10 flex items-center justify-center shadow-lg">
+                  {step.icon}
                 </div>
+
+                {/* Large Number Behind */}
+                <div className="absolute top-0 text-[90px] md:text-[180px] font-bold opacity-10 leading-none select-none pointer-events-none">
+                  {step.number}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold mb-3 relative z-10">
+                  {step.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm relative z-10 max-w-xs mx-auto">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
@@ -570,7 +573,7 @@ export default function ConfidentialPrinting() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-14 items-center">
             {/* LEFT CONTENT */}
-            <div className="space-y-6">
+            <div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
               <h2
                 className="text-3xl md:text-4xl font-extrabold leading-tight"
                 style={{ color: "#1a498b" }}
@@ -581,22 +584,23 @@ export default function ConfidentialPrinting() {
                 </span>
               </h2>
 
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-lg">
                 Experience tamper-proof, secure, and confidential printing with
                 complete tracking — from encrypted file upload to sealed
                 dispatch.
               </p>
 
-              <img
-                src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=500&auto=format"
-                alt="Secure Printing"
-                className="rounded-xl shadow-xl border border-gray-200 hover:scale-105 transition-transform duration-300"
-              />
+              <div className="w-full flex justify-center md:justify-start">
+                <img
+                  src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=500&auto=format"
+                  alt="Secure Printing"
+                  className="rounded-xl shadow-xl border border-gray-200 hover:scale-105 transition-transform duration-300 max-w-full"
+                />
+              </div>
             </div>
 
             {/* RIGHT CONTENT (FEATURE LIST) */}
-            <div className="space-y-8">
-              {/* Feature Reusable Block */}
+            <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
                   title: "ISO-Certified Secure Printing Facility",
@@ -623,24 +627,17 @@ export default function ConfidentialPrinting() {
                   text: "Live status of printing, sealing, and dispatch ensures transparency.",
                 },
               ].map((feature, index) => (
-                <div key={index}>
-                  <div className="flex items-start gap-4">
-                    <div className="w-3 h-3 bg-[#1a498b] rounded-full mt-2"></div>
-                    <div>
-                      <h3
-                        className="text-xl font-bold mb-1"
-                        style={{ color: "#1a498b" }}
-                      >
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-600 text-[15px] leading-relaxed">
-                        {feature.text}
-                      </p>
-                    </div>
-                  </div>
+                <div
+                  key={index}
+                  className="bg-[#1a498b] text-white rounded-xl p-6 flex flex-col items-center text-center shadow-lg"
+                >
+                  {/* Heading */}
+                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
 
-                  {/* Divider except after last item */}
-                  {index !== 5 && <hr className="border-gray-300" />}
+                  {/* Paragraph */}
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    {feature.text}
+                  </p>
                 </div>
               ))}
             </div>
@@ -649,47 +646,45 @@ export default function ConfidentialPrinting() {
       </section>
 
       {/* How Our Confidential Printing Process Section */}
-      <section
-        className="py-12 px-4 sm:px-6 lg:px-8"
-        style={{
-          background: "linear-gradient(135deg, #48B1E4 0%, #1B3376 100%)",
-        }}
-      >
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-center text-4xl font-bold mb-8 text-white">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#1a498b]">
+        <div className="max-w-3xl mx-auto flex flex-col items-center md:items-start text-center md:text-left">
+          <h2 className="text-4xl font-bold mb-8 text-white">
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-3">
-            {visibleFaqs.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md">
-                <button
-                  className="w-full flex justify-between items-center px-5 py-4 text-left"
-                  onClick={() => toggleFAQ(index)}
-                >
-                  <span className="text-lg font-medium text-gray-900">
-                    {index + 1}. {item.q}
-                  </span>
+       <div className="space-y-3 w-full">
+  {visibleFaqs.map((item, index) => (
+    <div key={index} className="bg-white rounded-xl shadow-md w-full">
+      <button
+        className="w-full flex justify-between items-center px-5 py-4 text-center md:text-left"
+        onClick={() => toggleFAQ(index)}
+      >
+        <span className="text-lg font-medium text-gray-900 w-full md:w-auto">
+          {index + 1}. {item.q}
+        </span>
 
-                  {openIndex === index ? (
-                    <Minus className="w-5 h-5 text-[#1B3376]" />
-                  ) : (
-                    <Plus className="w-5 h-5 text-[#1B3376]" />
-                  )}
-                </button>
+        <span className="ml-auto md:ml-0">
+          {openIndex === index ? (
+            <Minus className="w-5 h-5 text-[#1B3376]" />
+          ) : (
+            <Plus className="w-5 h-5 text-[#1B3376]" />
+          )}
+        </span>
+      </button>
 
-                {openIndex === index && (
-                  <div className="px-5 pb-4 text-gray-700 text-base leading-relaxed">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+      {openIndex === index && (
+        <div className="px-5 pb-4 text-gray-700 text-base leading-relaxed text-center md:text-left">
+          {item.a}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
 
           {/* Show More Button */}
           {!showMore && faqs.length > 4 && (
-            <div className="text-center mt-5">
+            <div className="mt-5 w-full flex justify-center">
               <button
                 onClick={() => setShowMore(true)}
                 className="bg-orange-600 text-white px-4 py-2 rounded-lg border border-orange-700 hover:bg-orange-700 transition-all duration-300 font-bold"
@@ -701,7 +696,7 @@ export default function ConfidentialPrinting() {
 
           {/* Show Less Button */}
           {showMore && (
-            <div className="text-center mt-5">
+            <div className="mt-5 w-full flex justify-center">
               <button
                 onClick={() => setShowMore(false)}
                 className="text-white underline text-base font-medium"
@@ -712,8 +707,9 @@ export default function ConfidentialPrinting() {
           )}
         </div>
       </section>
+
       {/* common code */}
-      <div className="w-full bg-gray-100 py-20 flex flex-col items-center text-center px-4">
+      <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-[#1a498b] mb-6">
           Need Secure & Reliable Examination Services?
         </h2>
@@ -725,11 +721,11 @@ export default function ConfidentialPrinting() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-600 text-white font-semibold text-lg px-6 py-3 rounded-lg transition">
-            Join Us
+          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+            Explore
           </button>
 
-          <button className="bg-orange-600 hover:bg-orange-600 text-white font-semibold text-lg px-6 py-3 rounded-lg transition">
+          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
             Contact Us
           </button>
         </div>

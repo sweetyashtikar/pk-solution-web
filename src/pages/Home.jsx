@@ -287,53 +287,46 @@ export default function TechOnTime() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* 1. Hero Section with Circuit Background */}
-      <div className="relative w-full min-h-[500px] bg-white flex items-center overflow-hidden">
-        {/* Circuit Pattern Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-50">
-          <CircuitBackground />
-        </div>
+    <div className="relative w-full bg-white flex items-center overflow-hidden">
+  {/* Circuit Pattern Background */}
+  <div className="absolute inset-0 pointer-events-none opacity-50">
+    <CircuitBackground />
+  </div>
 
-        <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center relative z-10">
-          {/* Left Side Content - Centered on Mobile */}
-          <div className="w-full md:w-1/2 space-y-6 mt-8 md:mt-0 text-center md:text-left">
-            <h1
-              className="text-4xl md:text-5xl font-extrabold leading-tight"
-              style={{ color: "#1a498b" }}
-            >
-              PK Solutions – Delivering Secure & Trusted Examination Services
-            </h1>
+  <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center relative z-10">
+    {/* Left Side Content */}
+    <div className="w-full md:w-1/2 space-y-6 mt-6 md:mt-0 text-center md:text-left">
+      <h1
+        className="text-4xl md:text-5xl font-extrabold leading-tight"
+        style={{ color: "#1a498b" }}
+      >
+        PK Solutions – Delivering Secure & Trusted Examination Services
+      </h1>
 
-            <p className="text-gray-600 text-lg md:text-xl max-w-lg mx-auto md:mx-0">
-              We provide reliable and confidential examination services tailored
-              for institutions of all sizes.
-            </p>
+      <p className="text-gray-600 text-lg md:text-xl max-w-lg mx-auto md:mx-0">
+        We provide reliable and confidential examination services tailored
+        for institutions of all sizes.
+      </p>
 
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2 justify-center md:justify-start">
-              <button
-                onClick={() => (window.location.href = "/services")}
-                className="bg-[#E6921A]  text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 w-[220px] mx-auto sm:mx-0"
-              >
-                LEARN MORE
-              </button>
-            </div>
-          </div>
-
-          {/* Right Side Image - Centered on Mobile */}
-          <div className="w-full md:w-1/2 flex justify-center">
-            <div className="w-full max-w-lg h-80 flex items-center justify-center">
-              <img src="/5259588.jpg" alt="" />
-            </div>
-          </div>
-        </div>
+      <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4 sm:pt-2 justify-center md:justify-start">
+        <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition mb-4 md:mb-0">
+          LEARN MORE
+        </button>
       </div>
+    </div>
+
+    {/* Right Side Image */}
+    <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
+      <div className="w-full max-w-lg h-auto flex items-center justify-center">
+        <img src="/5259588.jpg" alt="" className="w-full h-auto object-contain" />
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* 2. Who We Are Section */}
-      <div
-        className="py-16 px-8 border-t border-gray-200"
-        style={{
-          background: "linear-gradient(135deg, #48B1E4 0%, #1B3376 100%)",
-        }}
-      >
+      <div className="py-16 px-8 border-t border-gray-200 bg-[#1a498b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-extrabold mb-2 text-center text-white">
             Why Institutions Choose Us{" "}
@@ -372,6 +365,7 @@ export default function TechOnTime() {
       {/* 3. Our Values & Promise Section */}
       <section className="bg-white">
         <div className="bg-white py-16 md:py-16">
+          {/* 3.1 */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-16">
             {/* White Card Heading Box */}
             <div className="max-w-3xl mx-auto bg-white">
@@ -443,13 +437,7 @@ export default function TechOnTime() {
         </div>
 
         {/* 3.2 Our Values & Promise */}
-        <div
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-          style={{
-            minHeight: "450px",
-            background: "linear-gradient(135deg, #48B1E4 0%, #1B3376 100%)",
-          }}
-        >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-[#1a498b]">
           <div className="flex flex-col lg:flex-row lg:space-x-12">
             {/* Left Side Content */}
             <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left lg:ml-20">
@@ -457,7 +445,7 @@ export default function TechOnTime() {
                 Our Values & Promise
               </h3>
 
-              <p className="text-white text-lg mb-8 leading-relaxed italic font-bold">
+              <p className="text-white text-lg mb-8 leading-relaxed font-bold">
                 PK Solutions stands for security, accuracy, integrity, and
                 professionalism — delivering examination services that
                 institutions can trust. We ensure confidentiality in every
@@ -495,7 +483,7 @@ export default function TechOnTime() {
           </div>
         </div>
         {/* 3.3 Our Values & Promise */}
-        <div className="w-full bg-gray-100 py-20 flex flex-col items-center text-center px-4">
+        <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a498b] mb-6">
             Need Secure & Reliable Examination Services?
           </h2>
@@ -507,11 +495,11 @@ export default function TechOnTime() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-orange-600 hover:bg-orange-600 text-white font-semibold text-lg px-6 py-3 rounded-lg transition">
-              Join Us
+            <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+              Explore
             </button>
 
-            <button className="bg-orange-600 hover:bg-orange-600 text-white font-semibold text-lg px-6 py-3 rounded-lg transition">
+            <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
               Contact Us
             </button>
           </div>

@@ -15,7 +15,7 @@ import {
   Zap,
   Languages,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 export default function ExamPlatformLanding() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -136,8 +136,7 @@ export default function ExamPlatformLanding() {
 
   const solutions = [
     {
-      image:
-        "/young-activists-taking-action.jpg",
+      image: "/young-activists-taking-action.jpg",
       title: "Universities & Colleges",
     },
     {
@@ -274,9 +273,14 @@ export default function ExamPlatformLanding() {
               universities, PSUs, and corporates.
             </p>
 
-            <button className="bg-orange-600 text-white px-4 py-2 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105 w-max mx-auto">
+            <Link
+              to="/services"
+              className="bg-orange-600  text-white px-6 py-3 rounded-full 
+                   text-base sm:text-lg font-bold shadow-lg 
+                   hover:shadow-xl transition transform hover:scale-105"
+            >
               Get Started for Free
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -509,14 +513,15 @@ export default function ExamPlatformLanding() {
 
             {/* RIGHT SIDE TEXT + IMAGE */}
             <div className="p-6 rounded-2xl">
-              <h2 className="text-4xl font-bold mb-5 text-[#1a498b]">
-                Why Top Institutions Trust Our Online Exam Platform
-              </h2>
+             <h2 className="text-4xl font-bold mb-5 text-[#1a498b] text-center">
+  Why Top Institutions Trust Our Online Exam Platform
+</h2>
 
-              <p className="text-gray-700 mb-6">
-                Reliable. Secure. Scalable. Everything you need to conduct
-                high-stakes exams with confidence.
-              </p>
+<p className="text-gray-700 mb-6 text-center">
+  Reliable. Secure. Scalable. Everything you need to conduct
+  high-stakes exams with confidence.
+</p>
+
 
               <img
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
@@ -640,14 +645,20 @@ export default function ExamPlatformLanding() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Explore
-          </button>
-
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Contact Us
-          </button>
-        </div>
+        
+                        <Link
+                          to="/services"
+        
+                          className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                          EXPLORE
+                        </Link>
+        
+                        <Link
+                          to="/contact"
+                          className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                          CONTACT
+                        </Link>
+                      </div>
       </div>
     </div>
   );

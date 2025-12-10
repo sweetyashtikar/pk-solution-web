@@ -1,20 +1,14 @@
 import { useState } from "react";
 import {
   Smartphone,
-  Monitor,
-  Settings,
-  Cloud,
-  FileText,
-  Code,
-  Zap,
   CheckCircle,
-  ArrowRight,
-  Layers,
-  Globe,
-  Cpu,
+  BookOpen,
+  Printer,
+  Shield,
+  Target,
+  Award,
 } from "lucide-react";
-import { FaCheckCircle } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 // Circuit Background Component
 const CircuitBackground = () => (
   <svg
@@ -248,98 +242,45 @@ const CircuitBackground = () => (
 
 const services = [
   {
-    id: 1,
-    icon: Smartphone,
-    title: "Mobile App Development",
+    title: "OMR Division",
+    icon: <CheckCircle className="w-8 h-8" />,
     description:
-      "We build high-quality mobile applications combining technology, creativity and deliver solutions that truly matter.",
-    features: [
-      "Native iOS and Android development",
-      "Cross-platform solutions with React Native",
-      "UI/UX design and user testing",
-    ],
-    gradient: "from-[#2596BE] to-[#1e7a9f]",
+      "OSCAN OMR Software | Olympiad End to End Solutions | OMR Printing | Result Process processing | Analytics Report | OMR Sheet Scanning",
+    color: "from-blue-50 to-cyan-50",
+    borderColor: "border-blue-200",
   },
   {
-    id: 2,
-    icon: Globe,
-    title: "Websites",
+    title: "EdTech Products",
+    icon: <BookOpen className="w-8 h-8" />,
     description:
-      "We build responsive and modern websites that deliver seamless user experiences across all devices.",
-    features: [
-      "Responsive design for all screen sizes",
-      "Fast loading and optimized performance",
-      "SEO-friendly architecture",
-    ],
-    gradient: "from-[#2596BE] to-[#3aabcd]",
+      "E-Learning Software | Online Exam | Question Bank Management System | LMS | CRM | On Screen Marking Solution",
+    color: "from-emerald-50 to-teal-50",
+    borderColor: "border-emerald-200",
   },
   {
-    id: 3,
-    icon: Monitor,
-    title: "Web Design & Development",
+    title: "Printing",
+    icon: <Printer className="w-8 h-8" />,
     description:
-      "We combine technology, creativity and deliver solutions that truly matter.",
-    features: [
-      "Modern and intuitive UI/UX design",
-      "Full-stack web development",
-      "E-commerce and CMS solutions",
-    ],
-    gradient: "from-[#1e7a9f] to-[#2596BE]",
+      "OMR Sheets | Answer Booklet Printing | Degree mark-sheet Printing | Book Printing and Brochure | Certificates Printing | Confidential Printing",
+    color: "from-violet-50 to-purple-50",
+    borderColor: "border-violet-200",
   },
   {
-    id: 4,
-    icon: Code,
-    title: "Custom Software & Product Development",
+    title: "Digital Solutions",
+    icon: <Smartphone className="w-8 h-8" />,
     description:
-      "Your vision becomes reality with our custom software development services. We design and build tailored solutions that meet your specific business needs.",
-    features: [
-      "Mobile and web application development",
-      "Cloud infrastructure and deployment",
-      "Quality Engineering & Testing support",
-    ],
-    gradient: "from-[#3aabcd] to-[#2596BE]",
-  },
-  {
-    id: 5,
-    icon: Cloud,
-    title: "Business Automation & Cloud Services",
-    description:
-      "We combine technology and creativity to deliver solutions that truly matter.",
-    features: [
-      "Workflow automation and optimization",
-      "Cloud migration and infrastructure",
-      "DevOps and continuous deployment",
-    ],
-    gradient: "from-[#2596BE] to-[#175d7d]",
+      "Mobile App Development for Android & iOS | Web Development | Digital Marketing",
+    color: "from-amber-50 to-orange-50",
+    borderColor: "border-amber-200",
   },
 ];
 
 const quickServices = [
-  { icon: Smartphone, title: "Mobile App Development" },
-  { icon: Monitor, title: "Web Development" },
-  { icon: Settings, title: "Custom Solutions" },
-  { icon: Cloud, title: "Cloud Services" },
-  { icon: FileText, title: "Product Development" },
-];
-
-const features = [
-  "Innovative technology solutions",
-  "Customer-focused approach",
-  "Expert development team",
-];
-
-const trustReasons = [
-  "Strong Technical Expertise",
-  "Precise & Agile Approach",
-  "Customer-Centric Support",
-];
-
-const values = [
-  "Deliver long-lasting digital solutions",
-  "Maintain full transparency",
-  "Work with discipline",
-  "Support clients throughout",
-  "Continuously upgrade technologies",
+  "Confidential Printing",
+  "OMR Scanning",
+  "Mobile App Development",
+  "Software Development",
+  "Digital Marketing",
 ];
 
 export default function ServicesPage() {
@@ -348,383 +289,179 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative w-full min-h-[600px] bg-gradient-to-r from-[#155b73] via-[#1c7ea1] to-[#2596BE] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent mix-blend-multiply"></div>
+      <div className="relative min-h-screen flex items-center justify-center">
+        {/* Background Image Overlay */}
+        <div
+          className="absolute inset-0 opacity-60 z-0"
+          style={{
+            backgroundImage:
+              "url(/performance.webp)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
 
-        <div className="absolute inset-0 pointer-events-none opacity-75">
-          <CircuitBackground />
-        </div>
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-5 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content Box */}
+            <div className="bg-white p-8 rounded-3xl shadow-2xl backdrop-blur-lg max-w-xl mx-auto text-center">
+              <p className="text-[#1a498b] text-4xl font-extrabold mb-5">
+                Welcome to PK Solutions Where Excellence Meets Examination
+              </p>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-                Services
+              <h1 className="text-gray-500 text-lg font-bold leading-relaxed mb-6">
+                Services At PK Solutions, we support institutions with reliable,
+                secure, and high-quality examination and assessment solutions.
+                Our goal is to simplify and strengthen the complete exam
+                lifecycle through accuracy, confidentiality, and professional
+                execution
               </h1>
 
-              <p className="text-white/90 text-xl md:text-2xl mb-8 leading-relaxed font-bold">
-                We build high-performance, smartly-planned and elegant solutions
-                for industries.
-              </p>
-
-              <ul className="space-y-4 mb-8 inline-block text-left">
-                {features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
-                    <span className="text-white text-lg">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2 justify-center md:justify-start">
-                <button
-                  onClick={() => (window.location.href = "/services")}
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 w-[220px] mx-auto sm:mx-0"
+              <div className="flex justify-center pt-6">
+                <Link
+                  to="/products/online-examination-system"
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-4 rounded-lg transition text-center"
                 >
-                  LEARN MORE
-                </button>
+                  EXPLORE
+                </Link>
               </div>
             </div>
-
-            <div className="flex-1 flex justify-center md:justify-end">
-              <img src="/2lyo_5omm_230125.jpg" alt="Services Illustration" />
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-[#1B3376] mb-4">
-              Our Services
-            </h2>
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-extrabold text-[#1a498b] mb-6">
+            Welcome to PK Solutions
+          </h2>
+          <p className="text-3xl font-semibold text-black mb-4">
+            Where Excellence Meets Examination Services
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
+            At PK Solutions, we support institutions with reliable, secure, and high-quality examination and assessment solutions. Our goal is to simplify and strengthen the complete exam lifecycle through accuracy, confidentiality, and professional execution.
+          </p>
+        </div>
 
-            <p className="text-xl text-gray-600 font-bold">
-              Comprehensive solutions tailored to your business needs
-            </p>
-          </div>
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
 
-        <div className="space-y-16">
-  {services.map((service, index) => {
-    const Icon = service.icon;
-    const isDark = index % 2 === 0;
-    const alignReverse = index % 2 !== 0;
+          {/* Card 1 */}
+          <div className="bg-[#1a498b] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
 
-    return (
-      <div
-        key={service.id}
-        className={`relative overflow-hidden rounded-3xl ${
-          isDark
-            ? "bg-gradient-to-br from-[#155b73] via-[#1c7ea1] to-[#2596BE]"
-            : "bg-white border-2 border-gray-300"
-        }`}
-      >
-        {isDark && (
-          <div className="absolute inset-0 pointer-events-none opacity-30">
-            <CircuitBackground />
-          </div>
-        )}
-
-        <div
-          className={`relative z-10 p-12 flex flex-col md:flex-row items-center justify-center gap-16 ${
-            alignReverse ? "md:flex-row-reverse" : ""
-          }`}
-        >
-          {/* LEFT CONTENT CENTERED */}
-          <div className="flex-1 max-w-lg text-center md:text-left">
-            <div
-              className={`inline-flex p-5 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6`}
-            >
-              <Icon className="w-12 h-12 text-white" strokeWidth={1.5} />
+            {/* Icon */}
+            <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Shield className="w-8 h-8 text-white" />
             </div>
 
-            <h3
-              className={`text-3xl md:text-4xl font-bold mb-4 ${
-                isDark ? "text-white" : "text-gray-900"
-              }`}
-            >
-              {service.title}
+            <h3 className="text-xl font-bold text-white mb-3">
+              Reliability
             </h3>
 
-            <p
-              className={`text-lg mb-6 leading-relaxed ${
-                isDark ? "text-white/90" : "text-gray-700"
-              }`}
-            >
-              {service.description}
+            <p className="text-white/90">
+              Trusted by institutions for secure and accurate examination management with proven track record of excellence.
             </p>
-
-            <ul className="space-y-3 text-left mx-auto md:mx-0">
-              {service.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle
-                    className={`w-5 h-5 ${
-                      isDark ? "text-orange-400" : "text-[#2596BE]"
-                    }`}
-                  />
-                  <span className={isDark ? "text-white/90" : "text-gray-700"}>
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
 
-          {/* RIGHT SIDE DEVICE ICON ALWAYS CENTER */}
-          <div className="flex-1 flex justify-center items-center">
-            <div className="relative max-w-xs">
-              {index <= 1 ? (
-                <img src={service.mockup} className="w-full drop-shadow-xl" alt="" />
-              ) : (
-                <Icon
-                  className={`w-48 h-48 ${
-                    isDark ? "text-white/80" : "text-[#2596BE]"
-                  }`}
-                />
-              )}
+
+          {/* Card 2 */}
+          <div className="bg-[#1a498b] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+
+            <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Target className="w-8 h-8 text-white" />
             </div>
+
+            <h3 className="text-xl font-bold text-white mb-3">
+              Precision
+            </h3>
+
+            <p className="text-white/90">
+              Advanced technology and meticulous processes ensure zero-error results and complete data accuracy.
+            </p>
           </div>
-        </div>
-      </div>
-    );
-  })}
-</div>
+
+
+          {/* Card 3 */}
+          <div className="bg-[#1a498b] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+
+            <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Award className="w-8 h-8 text-white" />
+            </div>
+
+            <h3 className="text-xl font-bold text-white mb-3">
+              Excellence
+            </h3>
+
+            <p className="text-white/90">
+              Committed to delivering professional services that exceed expectations and support educational success.
+            </p>
+          </div>
 
         </div>
+
       </div>
 
-      {/* Quick Services Icons */}
-      <div className="py-16 px-6 bg-gray-50">
-        <h3 className="text-5xl font-bold text-center text-[#1B3376] mb-12">
-          Services Categories
-        </h3>
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {quickServices.map((service, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-md border-2 border-gray-400 transform hover:scale-105 hover:shadow-lg hover:border-[#2596BE]/40 transition-all duration-300"
-                onMouseEnter={() => setHoveredService(idx)}
-                onMouseLeave={() => setHoveredService(null)}
-              >
-                <div
-                  className={`p-5 rounded-full mb-5 transition-all duration-300 ${
-                    hoveredService === idx
-                      ? "bg-gradient-to-br from-[#2596BE] to-[#3aabcd]"
-                      : "bg-[#2596BE]/10"
-                  }`}
-                >
-                  <service.icon
-                    className={`w-14 h-14 transition-all duration-300 ${
-                      hoveredService === idx ? "text-white" : "text-[#2596BE]"
-                    }`}
-                    strokeWidth={1.5}
-                  />
+      {/* Main Services Grid */}
+      <div className="lg:col-span-3 bg-[#1a498b] p-10 rounded-2xl">
+        <h2 className="text-4xl font-bold text-white mb-8 text-center">
+          Our Products & Services
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-white overflow-hidden group"
+            >
+              <div className="p-8 text-center">
+                {" "}
+                {/* CENTER ADDED */}
+                {/* Icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="bg-orange-600 p-3 rounded-xl shadow-md text-white group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
                 </div>
-
-                <h3 className="font-bold text-base md:text-lg text-center text-gray-800 leading-snug">
+                {/* Title */}
+                <h3 className="text-3xl font-bold text-[#1a498b] mb-4">
                   {service.title}
                 </h3>
+                {/* Description */}
+                <p className="text-[#1a498b] text-lg leading-relaxed mb-6">
+                  {service.description}
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Why Trust Us Section */}
-      <div className="bg-[#2596BE] text-white py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
-          {/* Heading */}
-          <div className="max-w-3xl mx-auto space-y-3">
-            <h2
-              className="text-4xl md:text-4xl font-extrabold text-center"
-              style={{ color: "#1b3376" }}
-            >
-              HOW WE WORK
-            </h2>
-            <p className="text-xl font-bold text-cyan-100">
-              We combine technology, creativity, and deliver to truly matter.
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-4 md:px-0">
-            {/* Card 1 */}
-            <div className="bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-gray-200">
-              <FaCheckCircle className="h-10 w-10 text-orange-400 mb-4" />
-              <h3 className="text-2xl font-bold text-[#1b3376]">
-                Requirement Understanding
-              </h3>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                We begin by deeply understanding your business needs, workflows,
-                and goals. Our team studies your challenges and prepares a clear
-                roadmap based on realistic possibilities. This ensures the
-                development starts with complete clarity.
-              </p>
             </div>
-
-            {/* Card 2 */}
-            <div
-              className="bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center text-center 
-          hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-gray-200"
-            >
-              <FaCheckCircle className="h-10 w-10 text-orange-400 mb-4" />
-              <h3 className="text-2xl font-bold text-[#1b3376]">
-                Planning & Strategy
-              </h3>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                Before development, we create a structured plan covering
-                features, timelines, and technical approach. This strategy helps
-                us deliver the project in an organized and transparent manner,
-                without last-minute surprises.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div
-              className="bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center text-center 
-          hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-gray-200"
-            >
-              <FaCheckCircle className="h-10 w-10 text-orange-400 mb-4" />
-              <h3 className="text-2xl font-bold text-[#1b3376]">
-                UI/UX Design
-              </h3>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                Our design team creates user-friendly, modern, and intuitive
-                screens that reflect your brand identity. We prioritize
-                simplicity, smooth navigation, and practical layouts to ensure
-                your users love the experience from day one.
-              </p>
-            </div>
-
-            {/* Card 4 */}
-            <div
-              className="bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center text-center 
-          hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-gray-200"
-            >
-              <FaCheckCircle className="h-10 w-10 text-orange-400 mb-4" />
-              <h3 className="text-2xl font-bold text-[#1b3376]">
-                Agile Development Process
-              </h3>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                Our developers work in phases, building your solution
-                step-by-step with continuous improvements. This agile approach
-                allows flexibility, faster results, and the ability to adapt
-                changes quickly without affecting quality.
-              </p>
-            </div>
-            {/* Card 5 */}
-            <div
-              className="bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center text-center 
-          hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-gray-200"
-            >
-              <FaCheckCircle className="h-10 w-10 text-orange-400 mb-4" />
-              <h3 className="text-2xl font-bold text-[#1b3376]">
-                Testing & Quality Check
-              </h3>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                Every feature undergoes strict testing, including functionality,
-                performance, and security checks. We fix any issues before
-                deployment to ensure your system runs smoothly, reliably, and
-                without interruptions.
-              </p>
-            </div>
-            {/* Card 6 */}
-            <div
-              className="bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center text-center 
-          hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-gray-200"
-            >
-              <FaCheckCircle className="h-10 w-10 text-orange-400 mb-4" />
-              <h3 className="text-2xl font-bold text-[#1b3376]">
-                Deployment & Support
-              </h3>
-              <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                Once approved, we deploy your solution on a secure and optimized
-                environment. After launch, we provide ongoing support, updates,
-                and maintenance to keep your system stable and up to date as
-                your business grows.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Values Section */}
-      <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"
-        style={{ minHeight: "450px" }}
-      >
-        <div className="flex flex-col lg:flex-row lg:space-x-12">
-          {/* Left Side Content */}
-          <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left lg:ml-20">
-            <h3
-              className="text-4xl font-extrabold leading-tight mb-6"
-              style={{ color: "#1b3376" }}
-            >
-              Committed to Quality, Driven by Purpose
-            </h3>
-
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Every solution we build is guided by a clear purpose—to help your
-              business grow with confidence. We focus on delivering reliable,
-              high-quality systems that bring real results. Our disciplined
-              process and strong work ethics ensure each project meets the
-              standards your business deserves.
-            </p>
-
-            <p className="text-xl font-semibold text-gray-700 mt-6">
-              Your growth is our priority — and our solutions help you scale
-              effortlessly.
-            </p>
-          </div>
-
-          {/* Right Side Checklist */}
-          <div className="lg:w-1/2 lg:ml-20">
-            {" "}
-            {/* lg:ml-20 वापरून अजून उजवीकडे */}
-            <ul className="space-y-5 pl-16 md:pl-0">
-              {[
-                "Deliver long-lasting digital solutions",
-                "Quality-first development",
-                "Purpose-driven solutions",
-                "Precision in every detail",
-                "Built for long-term value",
-              ].map((item, index) => (
-                <li key={index} className="flex items-center justify-start">
-                  <FaCheckCircle className="h-6 w-6 text-[#2596BE] mr-3" />
-                  <span className="text-lg text-gray-700 font-medium">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="relative py-20 px-6 bg-gradient-to-r from-[#155b73] via-[#1c7ea1] to-[#2596BE] overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none opacity-30">
-          <CircuitBackground />
-        </div>
+      <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#1a498b] mb-6">
+          Need Secure & Reliable Examination Services?
+        </h2>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-white/90 mb-10">
-            Let's build something amazing together. Get in touch with our team
-            today.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <button
-              onClick={() => (window.location.href = "/contact")}
-              className="group px-10 py-5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
-            >
-              GET STARTED
-            </button>
-          </div>
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed mb-10">
+          Connect with us to discuss how we can support your institution with
+          end-to-end exam management—from confidential printing to complete
+          result processing.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          <Link
+            to="/services"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition"
+          >
+            EXPLORE
+          </Link>
+
+          <Link
+            to="/contact"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition"
+          >
+            CONTACT
+          </Link>
         </div>
       </div>
     </div>

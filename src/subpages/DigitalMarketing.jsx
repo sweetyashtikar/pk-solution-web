@@ -13,7 +13,7 @@ import {
   Smartphone,
   Plug,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const features = [
   {
     icon: <Target className="w-8 h-8" />,
@@ -123,10 +123,14 @@ export default function DigitalMarketing() {
               India's leading digital marketing company offering SEO, PPC,
               social media marketing, and more.
             </p>
-
-            <button className="bg-orange-600 text-white px-4 py-2 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105 w-max mx-auto">
+<Link
+              to='/services'
+              className="bg-orange-600  text-white px-6 py-3 rounded-full 
+                   text-base sm:text-lg font-bold shadow-lg 
+                   hover:shadow-xl transition transform hover:scale-105"
+            >
               Get Started for Free
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -356,14 +360,20 @@ export default function DigitalMarketing() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Explore
-          </button>
 
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Contact Us
-          </button>
-        </div>
+                <Link
+                  to="/services"
+
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  EXPLORE
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  CONTACT
+                </Link>
+              </div>
       </div>
     </div>
   );

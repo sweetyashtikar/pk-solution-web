@@ -22,7 +22,7 @@ import {
   GitBranch,
   Handshake,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const cards = [
   {
     icon: <ShieldCheck className="h-10 w-10 text-[#1a498b] mb-4" />,
@@ -188,18 +188,18 @@ export default function SoftwareDevelopment() {
           <div className="grid md:grid-cols-2 gap-14 items-start">
             {/* LEFT CONTENT */}
             <div className="space-y-6 text-black">
-              <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-[#1a498b]">
-                Powerful Features of Our Custom Software Solutions
-              </h2>
+           <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-[#1a498b] text-center">
+  Powerful Features of Our Custom Software Solutions
+</h2>
 
-              <p className="text-base md:text-lg leading-relaxed text-gray-700">
-                From dynamic business websites to institutional portals and
-                e-commerce platforms, we build secure, scalable, and fully
-                customized web solutions. Our development approach focuses on
-                speed, responsiveness, SEO optimization, and long-term
-                maintainability — delivering measurable results for every
-                client.
-              </p>
+<p className="text-base md:text-lg leading-relaxed text-gray-700 text-center">
+  From dynamic business websites to institutional portals and
+  e-commerce platforms, we build secure, scalable, and fully
+  customized web solutions. Our development approach focuses on
+  speed, responsiveness, SEO optimization, and long-term
+  maintainability — delivering measurable results for every
+  client.
+</p>
 
               <img
                 src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&auto=format"
@@ -298,15 +298,16 @@ export default function SoftwareDevelopment() {
 
           {/* RIGHT SIDE TEXT + IMAGE */}
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white leading-snug mb-4">
-              Intelligent Integrations That Make a Difference
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white leading-snug mb-4 text-center">
+  Intelligent Integrations That Make a Difference
+</h2>
 
-            <p className="text-white/90 mb-6">
-              Boost efficiency and engagement with built-in features. All
-              integrations are designed to work together and scale with your
-              business.
-            </p>
+<p className="text-white/90 mb-6 text-center">
+  Boost efficiency and engagement with built-in features. All
+  integrations are designed to work together and scale with your
+  business.
+</p>
+
 
             <img
               src="/ai-robot-interacting-with-futuristic-data-interface.jpg"
@@ -330,14 +331,20 @@ export default function SoftwareDevelopment() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Explore
-          </button>
 
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Contact Us
-          </button>
-        </div>
+                <Link
+                  to="/services"
+
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  EXPLORE
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  CONTACT
+                </Link>
+              </div>
       </div>
     </div>
   );

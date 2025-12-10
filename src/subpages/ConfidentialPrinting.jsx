@@ -1,6 +1,7 @@
 // ConfidentialPrinting.js
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { Link } from "react-router-dom";
 const faqs = [
   {
     q: "How does Multigraphics ensure document security?",
@@ -225,13 +226,14 @@ export default function ConfidentialPrinting() {
               confidentiality.
             </p>
 
-            <button
+            <Link
+              to='/services'
               className="bg-orange-600  text-white px-6 py-3 rounded-full 
                    text-base sm:text-lg font-bold shadow-lg 
                    hover:shadow-xl transition transform hover:scale-105"
             >
               Get Started for Free
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -652,34 +654,34 @@ export default function ConfidentialPrinting() {
             Frequently Asked Questions
           </h2>
 
-       <div className="space-y-3 w-full">
-  {visibleFaqs.map((item, index) => (
-    <div key={index} className="bg-white rounded-xl shadow-md w-full">
-      <button
-        className="w-full flex justify-between items-center px-5 py-4 text-center md:text-left"
-        onClick={() => toggleFAQ(index)}
-      >
-        <span className="text-lg font-medium text-gray-900 w-full md:w-auto">
-          {index + 1}. {item.q}
-        </span>
+          <div className="space-y-3 w-full">
+            {visibleFaqs.map((item, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-md w-full">
+                <button
+                  className="w-full flex justify-between items-center px-5 py-4 text-center md:text-left"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <span className="text-lg font-medium text-gray-900 w-full md:w-auto">
+                    {index + 1}. {item.q}
+                  </span>
 
-        <span className="ml-auto md:ml-0">
-          {openIndex === index ? (
-            <Minus className="w-5 h-5 text-[#1B3376]" />
-          ) : (
-            <Plus className="w-5 h-5 text-[#1B3376]" />
-          )}
-        </span>
-      </button>
+                  <span className="ml-auto md:ml-0">
+                    {openIndex === index ? (
+                      <Minus className="w-5 h-5 text-[#1B3376]" />
+                    ) : (
+                      <Plus className="w-5 h-5 text-[#1B3376]" />
+                    )}
+                  </span>
+                </button>
 
-      {openIndex === index && (
-        <div className="px-5 pb-4 text-gray-700 text-base leading-relaxed text-center md:text-left">
-          {item.a}
-        </div>
-      )}
-    </div>
-  ))}
-</div>
+                {openIndex === index && (
+                  <div className="px-5 pb-4 text-gray-700 text-base leading-relaxed text-center md:text-left">
+                    {item.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
 
 
           {/* Show More Button */}
@@ -721,13 +723,19 @@ export default function ConfidentialPrinting() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Explore
-          </button>
 
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Contact Us
-          </button>
+          <Link
+            to="/services"
+
+            className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+            EXPLORE
+          </Link>
+
+          <Link
+            to="/contact"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+            CONTACT
+          </Link>
         </div>
       </div>
     </div>

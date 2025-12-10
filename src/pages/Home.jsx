@@ -7,6 +7,8 @@ import {
   FaCloudUploadAlt,
   FaListAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 // Enhanced Circuit Pattern Background Component
 const CircuitBackground = () => (
@@ -287,42 +289,47 @@ export default function TechOnTime() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* 1. Hero Section with Circuit Background */}
-    <div className="relative w-full bg-white flex items-center overflow-hidden">
-  {/* Circuit Pattern Background */}
-  <div className="absolute inset-0 pointer-events-none opacity-50">
-    <CircuitBackground />
-  </div>
+      <div className="relative w-full bg-white flex items-center overflow-hidden">
+        {/* Circuit Pattern Background */}
+        <div className="absolute inset-0 pointer-events-none opacity-50">
+          <CircuitBackground />
+        </div>
 
-  <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center relative z-10">
-    {/* Left Side Content */}
-    <div className="w-full md:w-1/2 space-y-6 mt-6 md:mt-0 text-center md:text-left">
-      <h1
-        className="text-4xl md:text-5xl font-extrabold leading-tight"
-        style={{ color: "#1a498b" }}
-      >
-        PK Solutions – Delivering Secure & Trusted Examination Services
-      </h1>
+        <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center relative z-10 py-8 md:py-12">
+          {/* Left Side Content */}
+          <div className="w-full md:w-1/2 space-y-4 mt-8 md:mt-0 text-center md:text-left">
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
+              style={{ color: "#1a498b" }}
+            >
+              PK Solutions – Delivering Secure & Trusted Examination Services
+            </h1>
 
-      <p className="text-gray-600 text-lg md:text-xl max-w-lg mx-auto md:mx-0">
-        We provide reliable and confidential examination services tailored
-        for institutions of all sizes.
-      </p>
+            <p className="text-gray-600 text-lg md:text-xl max-w-xl mx-auto md:mx-0">
+              We provide reliable and confidential examination services tailored
+              for institutions of all sizes.
+            </p>
 
-      <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4 sm:pt-2 justify-center md:justify-start">
-        <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition mb-4 md:mb-0">
-          LEARN MORE
-        </button>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2 pt-6 justify-center md:justify-start">
+              <Link
+                to="/services"
+                className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-4 rounded-lg transition mb-4 md:mb-0 text-center"
+              >
+                EXPLORE
+              </Link>
+            </div>
+
+          </div>
+
+          {/* Right Side Image */}
+          <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+            <div className="w-full max-w-xl h-auto flex items-center justify-center">
+              <img src="/5259588.jpg" alt="" className="w-full h-auto object-contain" />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    {/* Right Side Image */}
-    <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
-      <div className="w-full max-w-lg h-auto flex items-center justify-center">
-        <img src="/5259588.jpg" alt="" className="w-full h-auto object-contain" />
-      </div>
-    </div>
-  </div>
-</div>
 
 
       {/* 2. Who We Are Section */}
@@ -345,7 +352,7 @@ export default function TechOnTime() {
               >
                 <div className="flex items-center justify-center h-16 w-16 mb-4 bg-[#48B1E4]/10 rounded-full group-hover:bg-[#48B1E4]/20 transition-all duration-300">
                   <service.icon
-                    className="h-7 w-7 text-[#48B1E4] group-hover:rotate-6 transition-all duration-300"
+                    className="h-7 w-7 text-[#1a498b] group-hover:rotate-6 transition-all duration-300"
                     aria-hidden="true"
                   />
                 </div>
@@ -495,13 +502,19 @@ export default function TechOnTime() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-              Explore
-            </button>
 
-            <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-              Contact Us
-            </button>
+            <Link
+              to="/services"
+
+              className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+              EXPLORE
+            </Link>
+
+            <Link
+             to="/contact"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+              CONTACT
+            </Link>
           </div>
         </div>
       </section>

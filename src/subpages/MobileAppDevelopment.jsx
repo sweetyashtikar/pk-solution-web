@@ -13,9 +13,8 @@ import {
   Database,
   CheckCircle,
   Bell,
-  Link,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const steps = [
   {
     number: "1",
@@ -225,9 +224,14 @@ export default function MobileAppDevelopment() {
               printing.
             </p>
 
-            <button className="bg-orange-600  text-white px-5 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105">
-              Get Started for Free
-            </button>
+           <Link
+                         to='/services'
+                         className="bg-orange-600  text-white px-6 py-3 rounded-full 
+                              text-base sm:text-lg font-bold shadow-lg 
+                              hover:shadow-xl transition transform hover:scale-105"
+                       >
+                         Get Started for Free
+                       </Link>
           </div>
         </div>
       </section>
@@ -375,13 +379,14 @@ export default function MobileAppDevelopment() {
 
             {/* RIGHT SIDE TEXT + IMAGE */}
             <div className="p-6 rounded-2xl">
-              <h2 className="text-4xl font-bold mb-5 text-[#1a498b]">
+              <h2 className="text-4xl font-bold mb-5 text-[#1a498b] text-center">
                 What Sets Our Android & iOS Apps Apart
               </h2>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6 text-center">
                 Bringing Innovation to Life with Custom Android & iOS Apps
               </p>
+
 
               <img
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
@@ -394,52 +399,52 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* Target Users Section */}
-     <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#1a498b" }}>
-  <div className="max-w-7xl mx-auto text-center text-white">
-    <h2 className="text-4xl md:text-5xl font-bold mb-4">
-      Target Users of Our Mobile App Development Services
-    </h2>
-    <p className="text-xl mb-16">
-      Empowering Every Digital Experience — From Startups to Enterprises
-    </p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#1a498b" }}>
+        <div className="max-w-7xl mx-auto text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Target Users of Our Mobile App Development Services
+          </h2>
+          <p className="text-xl mb-16">
+            Empowering Every Digital Experience — From Startups to Enterprises
+          </p>
 
-    <div className="grid md:grid-cols-3 gap-8">
-      {[
-        {
-          image:
-            "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=500&fit=crop",
-          title: "Schools & K-12 Institutions",
-        },
-        {
-          image:
-            "https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=500&fit=crop",
-          title: "Colleges & Universities",
-        },
-        {
-          image:
-            "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop",
-          title: "Corporate Training Departments",
-        },
-      ].map((user, idx) => (
-        <div
-          key={idx}
-          className="relative group overflow-hidden rounded-3xl shadow-xl h-80"
-        >
-          <img
-            src={user.image}
-            alt={user.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent flex items-end p-8">
-            <h3 className="text-2xl font-bold text-white">
-              {user.title}
-            </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                image:
+                  "/representation-user-experience-interface-design.jpg",
+                title: "Schools & K-12 Institutions",
+              },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=500&fit=crop",
+                title: "Colleges & Universities",
+              },
+              {
+                image:
+                  "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop",
+                title: "Corporate Training Departments",
+              },
+            ].map((user, idx) => (
+              <div
+                key={idx}
+                className="relative group overflow-hidden rounded-3xl shadow-xl h-80"
+              >
+                <img
+                  src={user.image}
+                  alt={user.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent flex items-end p-8">
+                  <h3 className="text-2xl font-bold text-white">
+                    {user.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Why Choose Us Section */}
       {/* <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -514,7 +519,7 @@ export default function MobileAppDevelopment() {
       </section> */}
 
       {/* CTA Section */}
-       <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
+      <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-[#1a498b] mb-6">
           Need Secure & Reliable Examination Services?
         </h2>
@@ -526,13 +531,18 @@ export default function MobileAppDevelopment() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Explore
-          </button>
+          
+          <Link
+          to="/services"
+          className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+            EXPLORE
+          </Link>
 
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Contact Us
-          </button>
+          <Link 
+          to="/contact"
+          className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+             CONTACT
+          </Link>
         </div>
       </div>
     </div>

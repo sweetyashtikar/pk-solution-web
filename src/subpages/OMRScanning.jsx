@@ -13,7 +13,7 @@ import {
   Database,
   CheckCircle,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const faqs = [
   {
     q: " What is OMR Scanning and how does it work?",
@@ -212,9 +212,15 @@ export default function OMRScanning() {
               accuracy and quick turnaround time.
             </p>
 
-            <button className="bg-orange-600  text-white px-5 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition transform hover:scale-105">
-              Get Started for Free
-            </button>
+            
+                        <Link
+                          to='/services'
+                          className="bg-orange-600  text-white px-6 py-3 rounded-full 
+                               text-base sm:text-lg font-bold shadow-lg 
+                               hover:shadow-xl transition transform hover:scale-105"
+                        >
+                          Get Started for Free
+                        </Link>
           </div>
         </div>
       </section>
@@ -279,64 +285,67 @@ export default function OMRScanning() {
       <HowItsDone />
 
       {/* FAQ Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#1a498b]">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-center text-4xl font-bold mb-8 text-white">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-3">
-            {visibleFaqs.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md">
-                <button
-                  className="w-full flex justify-between items-center px-5 py-4 text-left"
-                  onClick={() => toggleFAQ(index)}
-                >
-                  <span className="text-lg font-medium text-gray-900">
-                    {index + 1}. {item.q}
-                  </span>
-
-                  {openIndex === index ? (
-                    <Minus className="w-5 h-5 text-[#1B3376]" />
-                  ) : (
-                    <Plus className="w-5 h-5 text-[#1B3376]" />
-                  )}
-                </button>
-
-                {openIndex === index && (
-                  <div className="px-5 pb-4 text-gray-700 text-base leading-relaxed">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Show More Button */}
-          {!showMore && faqs.length > 4 && (
-            <div className="text-center mt-5">
-              <button
-                onClick={() => setShowMore(true)}
-                className="bg-orange-600 text-white px-4 py-2 rounded-lg border border-orange-700 hover:bg-orange-700 transition-all duration-300 font-bold"
-              >
-                Show More
-              </button>
-            </div>
-          )}
-
-          {/* Show Less Button */}
-          {showMore && (
-            <div className="text-center mt-5">
-              <button
-                onClick={() => setShowMore(false)}
-                className="text-white underline text-base font-medium"
-              >
-                Show Less
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#1a498b]">
+             <div className="max-w-3xl mx-auto flex flex-col items-center md:items-start text-center md:text-left">
+               <h2 className="text-4xl font-bold mb-8 text-white">
+                 Frequently Asked Questions
+               </h2>
+     
+               <div className="space-y-3 w-full">
+                 {visibleFaqs.map((item, index) => (
+                   <div key={index} className="bg-white rounded-xl shadow-md w-full">
+                     <button
+                       className="w-full flex justify-between items-center px-5 py-4 text-center md:text-left"
+                       onClick={() => toggleFAQ(index)}
+                     >
+                       <span className="text-lg font-medium text-gray-900 w-full md:w-auto">
+                         {index + 1}. {item.q}
+                       </span>
+     
+                       <span className="ml-auto md:ml-0">
+                         {openIndex === index ? (
+                           <Minus className="w-5 h-5 text-[#1B3376]" />
+                         ) : (
+                           <Plus className="w-5 h-5 text-[#1B3376]" />
+                         )}
+                       </span>
+                     </button>
+     
+                     {openIndex === index && (
+                       <div className="px-5 pb-4 text-gray-700 text-base leading-relaxed text-center md:text-left">
+                         {item.a}
+                       </div>
+                     )}
+                   </div>
+                 ))}
+               </div>
+     
+     
+               {/* Show More Button */}
+               {!showMore && faqs.length > 4 && (
+                 <div className="mt-5 w-full flex justify-center">
+                   <button
+                     onClick={() => setShowMore(true)}
+                     className="bg-orange-600 text-white px-4 py-2 rounded-lg border border-orange-700 hover:bg-orange-700 transition-all duration-300 font-bold"
+                   >
+                     Show More
+                   </button>
+                 </div>
+               )}
+     
+               {/* Show Less Button */}
+               {showMore && (
+                 <div className="mt-5 w-full flex justify-center">
+                   <button
+                     onClick={() => setShowMore(false)}
+                     className="text-white underline text-base font-medium"
+                   >
+                     Show Less
+                   </button>
+                 </div>
+               )}
+             </div>
+           </section>
 
       {/* common code */}
       <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
@@ -351,14 +360,20 @@ export default function OMRScanning() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Explore
-          </button>
 
-          <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-            Contact Us
-          </button>
-        </div>
+                <Link
+                  to="/services"
+
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  EXPLORE
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  CONTACT
+                </Link>
+              </div>
       </div>
     </div>
   );

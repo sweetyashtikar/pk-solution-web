@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AboutPage() {
   return (
@@ -33,12 +34,18 @@ export default function AboutPage() {
                 through accuracy, confidentiality, and professional execution.
               </h1>
 
-              <button
-                className="bg-orange-600 hover:bg-orange-600 text-white font-bold 
-text-base px-4 py-2 rounded-lg transition mr-8"
-              >
-                EXPLOR OUR SERVICES
-              </button>
+
+
+              <div className="flex justify-center pt-6">
+                <Link
+                  to="/services"
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-4 rounded-lg transition text-center"
+                >
+                  EXPLORE
+                </Link>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -49,7 +56,7 @@ text-base px-4 py-2 rounded-lg transition mr-8"
         <div className="max-w-7xl mx-auto px-10">
           {/* Section Header */}
           <div className="mb-16">
-            <h2 className="text-[#1a498b] text-6xl font-bold mb-0 text-center">
+            <h2 className="text-[#1a498b] text-5xl font-bold mb-0 text-center">
               Our Mission & Vision
             </h2>
             <p className="text-gray-800 text-xl leading-relaxed max-w-6xl mx-auto text-center font-bold">
@@ -162,39 +169,39 @@ text-base px-4 py-2 rounded-lg transition mr-8"
         <div className="max-w-7xl mx-auto px-3">
           {/* Team Icon and Title */}
           <div className="flex flex-col items-center mb-8">
-           <div className="mb-6">
-  <svg
-    className="w-32 h-32"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 64 64"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path
-      d="M32 12a8 8 0 0 1 8 8c0 4-3 7-6 7s-6-3-6-7a8 8 0 0 1 8-8z"
-      stroke="#3AC9C9"
-      strokeWidth="3"
-      fill="none"
-    />
-    <path d="M32 20v6" stroke="#000" />
-    <path d="M28 26h8" stroke="#000" />
+            <div className="mb-6">
+              <svg
+                className="w-32 h-32"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path
+                  d="M32 12a8 8 0 0 1 8 8c0 4-3 7-6 7s-6-3-6-7a8 8 0 0 1 8-8z"
+                  stroke="#3AC9C9"
+                  strokeWidth="3"
+                  fill="none"
+                />
+                <path d="M32 20v6" stroke="#000" />
+                <path d="M28 26h8" stroke="#000" />
 
-    <line x1="32" y1="6" x2="32" y2="2" stroke="#000" />
-    <line x1="26" y1="8" x2="23" y2="4" stroke="#000" />
-    <line x1="38" y1="8" x2="41" y2="4" stroke="#000" />
+                <line x1="32" y1="6" x2="32" y2="2" stroke="#000" />
+                <line x1="26" y1="8" x2="23" y2="4" stroke="#000" />
+                <line x1="38" y1="8" x2="41" y2="4" stroke="#000" />
 
-    <circle cx="14" cy="44" r="9" stroke="#000" />
-    <circle cx="32" cy="44" r="9" stroke="#000" />
-    <circle cx="50" cy="44" r="9" stroke="#000" />
+                <circle cx="14" cy="44" r="9" stroke="#000" />
+                <circle cx="32" cy="44" r="9" stroke="#000" />
+                <circle cx="50" cy="44" r="9" stroke="#000" />
 
-    <path d="M5 55h18" stroke="#000" strokeWidth="2.5" />
-    <path d="M23 55h18" stroke="#000" strokeWidth="2.5" />
-    <path d="M41 55h18" stroke="#000" strokeWidth="2.5" />
-  </svg>
-</div>
+                <path d="M5 55h18" stroke="#000" strokeWidth="2.5" />
+                <path d="M23 55h18" stroke="#000" strokeWidth="2.5" />
+                <path d="M41 55h18" stroke="#000" strokeWidth="2.5" />
+              </svg>
+            </div>
 
 
             <h2 className="text-white text-5xl font-bold mb-4">OUR TEAM</h2>
@@ -242,30 +249,36 @@ text-base px-4 py-2 rounded-lg transition mr-8"
               </div>
             </div>
 
-           {/* Right - Content */}
-<div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
-  <h2 className="text-[#1a498b] text-5xl font-bold leading-tight">
-    Join Our Community
-  </h2>
+            {/* Right - Content */}
+            <div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
+              <h2 className="text-[#1a498b] text-5xl font-bold leading-tight">
+                Join Our Community
+              </h2>
 
-  <p className="text-gray-700 text-xl leading-relaxed font-bold max-w-lg">
-    Be a Part of a Purpose-Driven Team. At PK Solutions, we believe
-    great work happens when passionate minds come together. We value
-    creativity, collaboration, and the drive to build meaningful
-    solutions that uplift institutions and learners. Join us as we
-    innovate, experiment, and grow—together.
-  </p>
+              <p className="text-gray-700 text-xl leading-relaxed font-bold max-w-lg">
+                Be a Part of a Purpose-Driven Team. At PK Solutions, we believe
+                great work happens when passionate minds come together. We value
+                creativity, collaboration, and the drive to build meaningful
+                solutions that uplift institutions and learners. Join us as we
+                innovate, experiment, and grow—together.
+              </p>
 
-  <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full justify-center md:justify-start">
-    <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-      EXPLORE
-    </button>
+              <div className="flex flex-wrap justify-center gap-6">
 
-    <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
-      CONTACT US
-    </button>
-  </div>
-</div>
+                <Link
+                  to="/services"
+
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  EXPLORE
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+                  CONTACT
+                </Link>
+              </div>
+            </div>
 
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaCheckCircle,
   FaMobileAlt,
@@ -8,441 +8,451 @@ import {
   FaListAlt,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { UserPlus, CheckSquare, Calculator, ArrowRight } from "lucide-react";
 
-
-// Enhanced Circuit Pattern Background Component
-const CircuitBackground = () => (
-  <svg
-    className="absolute inset-0 w-full h-full"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1920 1080"
-    preserveAspectRatio="xMidYMid slice"
-  >
-    <defs>
-      <linearGradient id="circuitGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style={{ stopColor: "#2596BE", stopOpacity: 0.8 }} />
-        <stop offset="50%" style={{ stopColor: "#1e7a9f", stopOpacity: 0.6 }} />
-        <stop
-          offset="100%"
-          style={{ stopColor: "#175d7d", stopOpacity: 0.4 }}
-        />
-      </linearGradient>
-
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-        <feMerge>
-          <feMergeNode in="coloredBlur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
-
-    {/* Left side circuit lines */}
-    <g opacity="0.6" filter="url(#glow)">
-      {/* Horizontal lines left */}
-      <line
-        x1="0"
-        y1="150"
-        x2="400"
-        y2="150"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="0"
-        y1="250"
-        x2="350"
-        y2="250"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="0"
-        y1="350"
-        x2="450"
-        y2="350"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="0"
-        y1="450"
-        x2="300"
-        y2="450"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="0"
-        y1="550"
-        x2="400"
-        y2="550"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="0"
-        y1="650"
-        x2="350"
-        y2="650"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="0"
-        y1="750"
-        x2="420"
-        y2="750"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-
-      {/* Vertical connectors left */}
-      <line
-        x1="100"
-        y1="150"
-        x2="100"
-        y2="750"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="200"
-        y1="200"
-        x2="200"
-        y2="700"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="300"
-        y1="250"
-        x2="300"
-        y2="650"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-
-      {/* Connection nodes left */}
-      <circle cx="100" cy="150" r="6" fill="#3aabcd" />
-      <circle cx="200" cy="250" r="6" fill="#2596BE" />
-      <circle cx="300" cy="350" r="6" fill="#3aabcd" />
-      <circle cx="100" cy="450" r="6" fill="#2596BE" />
-      <circle cx="200" cy="550" r="6" fill="#3aabcd" />
-      <circle cx="300" cy="650" r="6" fill="#2596BE" />
-      <circle cx="100" cy="750" r="6" fill="#3aabcd" />
-    </g>
-
-    {/* Right side circuit lines */}
-    <g opacity="0.6" filter="url(#glow)">
-      {/* Horizontal lines right */}
-      <line
-        x1="1520"
-        y1="150"
-        x2="1920"
-        y2="150"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="1570"
-        y1="250"
-        x2="1920"
-        y2="250"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="1470"
-        y1="350"
-        x2="1920"
-        y2="350"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="1620"
-        y1="450"
-        x2="1920"
-        y2="450"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="1520"
-        y1="550"
-        x2="1920"
-        y2="550"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="1570"
-        y1="650"
-        x2="1920"
-        y2="650"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="1500"
-        y1="750"
-        x2="1920"
-        y2="750"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-
-      {/* Vertical connectors right */}
-      <line
-        x1="1820"
-        y1="150"
-        x2="1820"
-        y2="750"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-      <line
-        x1="1720"
-        y1="200"
-        x2="1720"
-        y2="700"
-        stroke="#3aabcd"
-        strokeWidth="2"
-      />
-      <line
-        x1="1620"
-        y1="250"
-        x2="1620"
-        y2="650"
-        stroke="#2596BE"
-        strokeWidth="2"
-      />
-
-      {/* Connection nodes right */}
-      <circle cx="1820" cy="150" r="6" fill="#3aabcd" />
-      <circle cx="1720" cy="250" r="6" fill="#2596BE" />
-      <circle cx="1620" cy="350" r="6" fill="#3aabcd" />
-      <circle cx="1820" cy="450" r="6" fill="#2596BE" />
-      <circle cx="1720" cy="550" r="6" fill="#3aabcd" />
-      <circle cx="1620" cy="650" r="6" fill="#2596BE" />
-      <circle cx="1820" cy="750" r="6" fill="#3aabcd" />
-    </g>
-
-    {/* Animated pulse effect */}
-    <g opacity="0.4">
-      <circle cx="200" cy="250" r="8" fill="#3aabcd">
-        <animate
-          attributeName="opacity"
-          values="0.4;1;0.4"
-          dur="2s"
-          repeatCount="indefinite"
-        />
-      </circle>
-      <circle cx="1720" cy="350" r="8" fill="#2596BE">
-        <animate
-          attributeName="opacity"
-          values="0.4;1;0.4"
-          dur="2.5s"
-          repeatCount="indefinite"
-        />
-      </circle>
-    </g>
-  </svg>
-);
-
-// Services Data
-const servicesData = [
+const services = [
   {
-    icon: FaMobileAlt,
-    title: "Secure & Confidential Operations",
-    description:
-      "Strict handling, printing, and dispatch procedures to protect examination integrity.",
+    img: "/onscreen-home-new.webp",
+    title: "Oscan OMR Software ",
+    desc: "Advanced OMR form reading and evaluation software designed for accurate, fast, and large-scale data processing used by exam boards, institutes, and government bodies.",
   },
   {
-    icon: FaGlobe,
-    title: "Accuracy & Reliability",
-    description:
-      "Every step—from printing to result processing—is backed by quality checks.",
+    img: "/oscan-home.webp",
+    title: "On Screen Marking Solution",
+    desc: "A scalable, feature-rich LMS for institutions and corporates — supporting content delivery, assessments, tracking, and certification in one unified platform.",
   },
   {
-    icon: FaCog,
-    title: "End-to-End Solutions",
-    description:
-      "Complete exam cycle support under one roof ensures convenience and transparency.",
+    img: "/printing-home-new.webp",
+    title: "Confidential Exam Printing",
+    desc: "High-security printing of question papers, OMR sheets, and ballots with tamper-proof tech, encrypted workflows, and custom packaging.",
   },
   {
-    icon: FaCloudUploadAlt,
-    title: "Scalable for High Volume",
-    description:
-      "Capable of managing exams for boards, universities, and large recruitment bodies.",
+    img: "/scanning-home.webp",
+    title: "OMR Scanning and Result Processing",
+    desc: "Fast, accurate scanning and result generation of OMR sheets — ideal for entrance exams, recruitments, and academic evaluations.",
   },
   {
-    icon: FaListAlt,
-    title: "Timely & Professional Delivery",
-    description:
-      "Committed to meeting institutional timelines without compromising quality.",
+    img: "/lms-home-new.webp",
+    title: "Learning Management System",
+    desc: "A scalable, feature-rich LMS for institutions and corporates — supporting content delivery, assessments, tracking, and certification in one unified platform.",
   },
 ];
 
+const servicesNew = [
+  {
+    title: "OMR Division",
+    description:
+      "OSCAN OMR Software | Olympiad End to End Solutions | OMR Printing | Result Process processing | Analytics Report | OMR Sheet Scanning",
+    link: "/services/omr-scanning",
+  },
+  {
+    title: "EdTech Products",
+    description:
+      "E-Learning Software | Online Exam | Question Bank Management System | LMS | CRM | On Screen Marking Solution",
+    link: "/products/online-examination-system",
+  },
+  {
+    title: "Printing",
+    description:
+      "OMR Sheets | Answer Booklet Printing | Degree mark-sheet Printing | Book Printing and Brochure | Certificates Printing | Confidential Printing",
+    link: "/services/confidential-printing",
+  },
+  {
+    title: "Digital Solutions",
+    description:
+      "Mobile App Development for Android & iOS | Web Development | Digital Marketing",
+    link: "/services/digital-marketing",
+  },
+];
+// Services Data
+const servicesData = [
+  {
+    title: "Comprehensive Exam Management",
+    description:
+      "End-to-end solutions from printing to result processing for seamless exam administration.",
+    icon: FaListAlt,
+  },
+  {
+    title: "Secure Printing & Delivery",
+    description:
+      "Confidential printing with tamper-evident packaging and tracked delivery to exam centers.",
+    icon: FaCloudUploadAlt,
+  },
+  {
+    title: "Data Accuracy & Validation",
+    description:
+      "Multi-layer quality checks to ensure error-free data entry and result accuracy.",
+    icon: FaCog,
+  },
+  {
+    title: "Online & Offline Exam Support",
+    description:
+      "Robust platforms for online exams and logistical support for offline assessments.",
+    icon: FaGlobe,
+  },
+  {
+    title: "24/7 Customer Support",
+    description:
+      "Dedicated support team available around the clock to assist institutions.",
+    icon: FaMobileAlt,
+  },
+];
+
+const steps = [
+  {
+    title: "Idea & Analysis Gathering",
+    icon: <UserPlus className="w-5 h-5" />,
+    heading: "Idea & Analysis Gathering",
+    descBold: "We begin by understanding your goals, audience, and challenges.",
+    desc: "Our team collaborates with you to gather insights, define requirements, and brainstorm effective digital solutions.",
+  },
+  {
+    title: "Designing & Developing",
+    icon: <CheckSquare className="w-5 h-5" />,
+    heading: "Designing & Developing",
+    descBold:
+      "Your ideas come to life with modern UI/UX and robust development.",
+    desc: "We create wireframes, design interfaces, and develop the product using the best tech stack to ensure quality.",
+  },
+  {
+    title: "Testing & Launching",
+    icon: <Calculator className="w-5 h-5" />,
+    heading: "Testing & Launching",
+    descBold: "We ensure everything is smooth, bug-free, and ready for users.",
+    desc: "After testing, your digital product goes live with complete support and optimization.",
+  },
+];
 export default function TechOnTime() {
+  const [active, setActive] = useState(0);
   return (
     <div className="min-h-screen bg-gray-50">
       {/* 1. Hero Section with Circuit Background */}
-      <div className="relative w-full bg-white flex items-center overflow-hidden">
-        {/* Circuit Pattern Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-50">
-          <CircuitBackground />
-        </div>
+      <div className="relative min-h-[70vh] flex items-center justify-center bg-gray-50">
+        {/* Background Image Overlay */}
+        <div
+          className="absolute inset-0 opacity-60 z-0"
+          style={{
+            backgroundImage:
+              "url(/group-people-working-out-business-plan-office.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
 
-        <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center relative z-10 py-8 md:py-12">
-          {/* Left Side Content */}
-          <div className="w-full md:w-1/2 space-y-4 mt-8 md:mt-0 text-center md:text-left">
-            <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
-              style={{ color: "#1a498b" }}
+        {/* Content Container */}
+        <div className="relative z-10 max-w-6xl mx-auto px-2 py-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+            {/* Left Content Box */}
+            <div
+              className="
+      bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-xl 
+      max-w-xl w-full               /* width increased */
+      mx-auto                       /* mobile: center */
+      lg:mx-0 lg:justify-self-start /* desktop: left */
+      text-center lg:text-left      /* mobile center, desktop left */
+    "
             >
-              PK Solutions – Delivering Secure & Trusted Examination Services
-            </h1>
+              <h1 className="text-[#1a498b] text-2xl sm:text-3xl font-bold mb-4 leading-tight">
+                Welcome to PK Solutions Where Excellence Meets Examination
+                Services
+              </h1>
 
-            <p className="text-gray-600 text-lg md:text-xl max-w-xl mx-auto md:mx-0">
-              We provide reliable and confidential examination services tailored
-              for institutions of all sizes.
-            </p>
+              <div className="space-y-1 mb-5">
+                <p className="text-gray-700 text-base font-bold">
+                  <span className="text-[#1a498b]">Your Assessment</span>, Our
+                  Precision.
+                </p>
+                <p className="text-gray-700 text-base font-bold">
+                  <span className="text-[#1a498b]">Your Learning</span>, Our
+                  Platform.
+                </p>
+                <p className="text-gray-700 text-base font-bold">
+                  <span className="text-[#1a498b]">Your Prints</span>, Our
+                  Promise.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2 pt-6 justify-center md:justify-start">
-              <Link
-                to="/services"
-                className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-4 rounded-lg transition mb-4 md:mb-0 text-center"
-              >
-                EXPLORE
-              </Link>
+              <div className="pt-1">
+                <Link
+                  to="/contact"
+                  className="inline-block bg-[#1a498b] hover:bg-[#0a5268] text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                >
+                  Get Started For Free
+                </Link>
+              </div>
             </div>
 
-          </div>
+            {/* Right Services Box */}
+            <div
+              className="
+      bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-5 
+      max-w-md w-full
+      mx-auto                  /* mobile center */
+      lg:mx-0 lg:justify-self-end   /* desktop right */
+      text-center lg:text-left       /* mobile center, desktop left */
+    "
+            >
+              <h2 className="text-[#1a498b] text-xl font-extrabold mb-4">
+                Our Products & Services
+              </h2>
 
-          {/* Right Side Image */}
-          <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
-            <div className="w-full max-w-xl h-auto flex items-center justify-center">
-              <img src="/5259588.jpg" alt="" className="w-full h-auto object-contain" />
+              <div className="space-y-3">
+                {servicesNew.map((service, index) => (
+                  <Link
+                    key={index}
+                    to={service.link}
+                    className="group block bg-[#1a498b] p-4 rounded-xl transition-all duration-300 shadow-md border border-[#1a498b]/20 text-white"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <h3 className="text-white text-lg font-bold mb-1">
+                          {service.title}
+                        </h3>
+                        <p className="text-white text-xs leading-snug">
+                          {service.description}
+                        </p>
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-white ml-3 mt-1" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
-
-      {/* 2. Who We Are Section */}
-      <div className="py-16 px-8 border-t border-gray-200 bg-[#1a498b]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-extrabold mb-2 text-center text-white">
-            Why Institutions Choose Us{" "}
+      {/* Section 2  services */}
+      <section className="py-20 px-4 bg-[#1a498b]">
+        <div className="max-w-7xl mx-auto text-white space-y-6 text-center">
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center">
+            What We Have For You
           </h2>
 
-          <p className="text-2xl text-gray-200 font-semibold mb-12 text-center">
-            Committed to providing safe, seamless, and error-free examination
-            support.{" "}
+          <p className="text-lg md:text-xl font-medium text-gray-200 mx-auto">
+            We deliver scalable, secure, and customizable EduTech and business
+            solutions complete with seamless integration, real-time updates, and
+            24/7 accessibility to meet the evolving needs of educational
+            institutions and enterprises.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
-            {servicesData.map((service, index) => (
+          {/* Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-10">
+            {services.map((item, index) => (
               <div
                 key={index}
-                className="group flex flex-col items-center p-6 bg-white border-2 border-transparent rounded-2xl shadow-lg text-center hover:border-[#48B1E4] hover:scale-105 transition-all duration-300"
+                className="bg-white rounded-2xl overflow-hidden shadow-xl transition-all duration-300"
               >
-                <div className="flex items-center justify-center h-16 w-16 mb-4 bg-[#48B1E4]/10 rounded-full group-hover:bg-[#48B1E4]/20 transition-all duration-300">
-                  <service.icon
-                    className="h-7 w-7 text-[#1a498b] group-hover:rotate-6 transition-all duration-300"
-                    aria-hidden="true"
-                  />
-                </div>
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-30 object-cover"
+                />
 
-                <h3 className="text-base font-bold text-gray-800 mb-1">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-snug">
-                  {service.description}
-                </p>
+                <div className="p-5 text-center">
+                  <h3 className="text-xl font-bold text-[#1a498b]">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-700 text-sm mt-2 leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  {/* Center Button */}
+                  <div className="flex justify-center mt-8">
+                    <button className="text-[#1a498b] font-bold px-4 py-2">
+                      Explore
+                    </button>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* 3. Our Values & Promise Section */}
-      <section className="bg-white">
-        <div className="bg-white py-16 md:py-16">
-          {/* 3.1 */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-16">
-            {/* White Card Heading Box */}
-            <div className="max-w-3xl mx-auto bg-white">
-              <h2 className="text-5xl md:text-5xl font-extrabold text-[#1b3376]">
-                Our Core Strengths
-              </h2>
-              <p className="text-xl font-semibold text-gray-700 mt-2">
-                Three key pillars that define our examination services.
-              </p>
-            </div>
+      {/* Section 3*/}
+      <section className="max-w-8xl mx-auto px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 bg-[#1a498b] rounded-2xl overflow-hidden">
+          {/* LEFT CONTENT */}
+          <div className="p-4 lg:p-6 text-white">
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-snug">
+              India's Leading <br />
+              <span className="text-gray-200 font-semibold">
+                EdTech Solution Provider
+              </span>
+            </h1>
 
-            {/* Cards Section */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-4 md:px-0">
-              {/* Card 1 */}
-              <div
-                className="bg-white rounded-2xl p-8 flex flex-col items-center text-center
-    shadow-[0_10px_45px_rgba(0,0,0,0.35)]
-    border border-gray-400 transition-all duration-300"
-              >
-                <FaCheckCircle className="h-10 w-10 text-[#1a498b] mb-4" />
-                <h3 className="text-3xl font-bold text-[#1b3376]">
-                  Secure Processes at Every Step
-                </h3>
-                <p className="text-gray-700 text-sm mt-3 leading-relaxed">
-                  From confidential printing to sealed delivery, every stage of
-                  our workflow is tightly controlled. Only authorized staff
-                  handle sensitive materials, ensuring full data protection and
-                  exam integrity.
-                </p>
-              </div>
+            <p className="text-lg font-semibold mt-3">
+              We don't just build tech — we build results.
+            </p>
 
-              {/* Card 2 */}
-              <div
-                className="bg-white rounded-2xl p-8 flex flex-col items-center text-center
-    shadow-[0_10px_45px_rgba(0,0,0,0.35)]
-    border border-gray-400 transition-all duration-300"
-              >
-                <FaCheckCircle className="h-10 w-10 text-[#1a498b] mb-4" />
-                <h3 className="text-3xl font-bold text-[#1b3376]">
-                  Accuracy That Builds Trust
-                </h3>
-                <p className="text-gray-700 text-sm mt-3 leading-relaxed">
-                  Every sheet, entry, and result goes through multiple quality
-                  checks to avoid errors. Our strict validation process ensures
-                  that institutions receive precise and dependable outcomes
-                  every time.
-                </p>
-              </div>
+            <p className="mt-2 text-gray-200 text-[15px] leading-relaxed">
+              Multigraphics Group builds scalable solutions across EdTech,
+              training, software development, mobile apps, digital marketing,
+              and exam tech.
+            </p>
 
-              {/* Card 3 */}
-              <div
-                className="bg-white rounded-2xl p-8 flex flex-col items-center text-center
-    shadow-[0_10px_45px_rgba(0,0,0,0.35)]
-    border border-gray-400 transition-all duration-300"
-              >
-                <FaCheckCircle className="h-10 w-10 text-[#1a498b] mb-4" />
-                <h3 className="text-3xl font-bold text-[#1b3376]">
-                  Timely & Professional Delivery
-                </h3>
-                <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                  We understand the importance of exam timelines. That’s why we
-                  plan, execute, and deliver every service with disciplined
-                  scheduling—ensuring institutions never face delays or
-                  disruptions.
-                </p>
-              </div>
-            </div>
+            <p className="mt-2 text-gray-200 text-[15px] leading-relaxed">
+              We help institutions and businesses automate, digitize, and grow.
+            </p>
+
+            <ul className="space-y-1.5 mt-3 text-gray-100 text-[15px]">
+              <li className="flex items-start gap-1.5">
+                <span className="text-lg">🛠️</span>
+                Simplify complex operations with custom-built tech
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-lg">📈</span>
+                Scalable smart digital tools for growth
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-lg">🎧</span>
+                Reach wider audiences with online infrastructure
+              </li>
+            </ul>
+
+            <button className="mt-4 bg-orange-600 text-white font-bold px-4 py-2 rounded-full shadow hover:bg-gray-100 transition">
+              Learn more
+            </button>
+          </div>
+
+          {/* RIGHT SIDE IMAGE */}
+          <div className="h-[250px] lg:h-full">
+            <img
+              src="/group-people-working-out-business-plan-office.jpg"
+              alt="Team"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
+      </section>
 
+      {/* Section 4 */}
+      <section className="py-12 px-6 bg-gradient-to-b from-[#1a498b] to-[#0f325f]">
+        {/* HEADING CENTER */}
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <h2 className="text-5xl font-bold text-white">Our Working Process</h2>
+          <p className="text-gray-200 mt-2 text-[18px] leading-relaxed">
+            Our process blends strategy, creativity, and technology — aligned
+            with your goals, timeline, and audience.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
+          {/* LEFT SIDE TABS - CENTERED */}
+          <div className="space-y-4 flex flex-col justify-center">
+            {steps.map((item, index) => (
+              <div
+                key={index}
+                onClick={() => setActive(index)}
+                className={`cursor-pointer flex items-center gap-4 p-5 rounded-xl transition-all
+            ${active === index
+                    ? "bg-white text-[#1a498b] font-bold shadow-xl"
+                    : "bg-white/80 text-gray-800 hover:bg-white shadow"
+                  }
+          `}
+              >
+                {/* ORANGE ICON CIRCLE */}
+                <div className="bg-orange-600 text-white w-10 h-10 flex justify-center items-center rounded-full text-xl shadow-md">
+                  {item.icon}
+                </div>
+
+                <h3 className="font-semibold text-[16px]">{item.title}</h3>
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT CONTENT - CENTERED */}
+          <div className="border border-white rounded-2xl p-8 shadow-xl bg-white/95 backdrop-blur text-center">
+            <h3 className="text-2xl font-bold text-[#1a498b]">
+              {steps[active].heading}
+            </h3>
+
+            <p className="font-semibold text-gray-900 mt-3 text-[16px]">
+              {steps[active].descBold}
+            </p>
+
+            <p className="text-gray-700 mt-3 text-[15px] leading-relaxed">
+              {steps[active].desc}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 */}
+      <section className="py-16 px-6 bg-white">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-extrabold text-[#1a498b]">
+            Industries We Serve
+          </h2>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+          {/* REUSABLE CARD */}
+          {[
+            {
+              img: "/education-icon.webp",
+              title: "Online Education",
+              desc:
+                "Empowering schools, colleges, coaching institutes, and training platforms with comprehensive digital learning tools — including LMS, online exams, content hosting, progress tracking, and certification management.",
+            },
+            {
+              img: "/healthcare-icon.webp",
+              title: "Healthcare",
+              desc:
+                "Delivering secure software solutions for medical institutions and training providers — scalable platforms for assessments, portals, and onboarding solutions.",
+            },
+            {
+              img: "/ecommerce-icon.webp",
+              title: "E-Commerce",
+              desc:
+                "Custom web and mobile app solutions for growing e-commerce brands — digitizing operations, tracking customers, and building secure online stores that convert.",
+            },
+            {
+              img: "/realestate-icon.webp",
+              title: "Real Estate",
+              desc:
+                "Helping property developers and real estate agencies showcase listings, automate inquiries, and manage leads with custom portals.",
+            },
+            {
+              img: "/corporate-staff.webp",
+              title: "Corporates",
+              desc:
+                "Corporate training, recruitment, internal assessments — with LMS, digital onboarding, mobile apps, and secure exam tools tailored to corporate needs.",
+            },
+            {
+              img: "/bank-new.webp",
+              title: "Government",
+              desc:
+                "Digital solutions for public sector organizations — online exam systems, OMR evaluation, digital portals, and workflow automation for transparency and scalability.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-[#1a498b] text-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center hover:scale-[1.02] transition"
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-16 h-16 mb-4"
+              />
+
+              <h3 className="text-3xl font-extrabold mb-2">{item.title}</h3>
+
+              <p className="text-white/90 leading-relaxed text-[15px]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
+      {/* 6 Our Values & Promise Section */}
+      <section className="bg-white">
         {/* 3.2 Our Values & Promise */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-[#1a498b]">
           <div className="flex flex-col lg:flex-row lg:space-x-12">
@@ -502,17 +512,17 @@ export default function TechOnTime() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
-
             <Link
               to="/services"
-
-              className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+              className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition"
+            >
               EXPLORE
             </Link>
 
             <Link
-             to="/contact"
-            className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition">
+              to="/contact"
+              className="bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg px-6 py-3 rounded-lg transition"
+            >
               CONTACT
             </Link>
           </div>

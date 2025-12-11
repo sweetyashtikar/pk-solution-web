@@ -12,20 +12,15 @@ export default function Footer() {
     { name: "CONTACT US", href: "/contact" },
   ];
 
-  const importantPages = [
-    { name: "Mobile App Development", href: "/services" },
-    { name: "Web Design & Development", href: "/services" },
-    { name: "Business Automation & Cloud Services", href: "/services" },
-    { name: "Internet of Things", href: "/services" },
-    { name: "Product Developing", href: "/services" },
-  ];
-
   const connectLinks = [
-    { name: "Business Automation Suite", href: "/products" },
-    { name: "EduTech Platforms", href: "/products" },
-    { name: "CRM Systems", href: "/products" },
-    { name: "ERP Systems", href: "/products" },
-    { name: "Mobile & Web App Products", href: "/products" },
+    { name: "Oscan OMR Software", href: "/services" },
+    { name: "Onscreen Marking", href: "/services" },
+    { name: "Learning Management System", href: "/services" },
+    { name: "Online Examination System", href: "/services" },
+  ];
+  const  importantPages= [
+    { name: "Confidential Printing", href: "/products" },
+    { name: "OMR-Scanning", href: "/products" },
   ];
 
   const socialIcons = [

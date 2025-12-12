@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import OnlineExaminationSystem from "./subpages/OnlineExaminationSystem";
 import ConfidentialPrinting from "./subpages/ConfidentialPrinting";
@@ -12,6 +11,8 @@ import OMRScanning from "./subpages/OMRScanning";
 import MobileAppDevelopment from "./subpages/MobileAppDevelopment";
 import SoftwareDevelopment from "./subpages/SoftwareDevelopment";
 import DigitalMarketing from "./subpages/DigitalMarketing";
+import OnscreenMarketing from "./subpages/OnscreenMarketing";
+import LearningMangementSystem from "./subpages/LearningMangementSystem";
 export default function App() {
   return (
     <Router>
@@ -21,14 +22,15 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/products/online-examination-system" element={<OnlineExaminationSystem />} />
           <Route path="/services/confidential-printing" element={<ConfidentialPrinting />} />
           <Route path="/services/omr-scanning" element={<OMRScanning />} />
           <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
           <Route path="/services/software-development" element={<SoftwareDevelopment />} />
           <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/products/online-examination-system" element={<OnlineExaminationSystem />} />
+          <Route path="/products/onscreen-marketing" element={<OnscreenMarketing />} />
+          <Route path="/products/learning-management-system" element={<LearningMangementSystem />} />
         </Routes>
       </div>
 

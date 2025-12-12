@@ -80,7 +80,7 @@ export default function SoftwareDevelopment() {
             <p className="text-lg leading-relaxed mb-8 font-medium text-gray-800">
               We build software that's not just functional — it's
               transformative. From custom enterprise tools to scalable SaaS
-              platforms, Multigraphics delivers solutions that streamline
+              platforms, PK Solutions delivers solutions that streamline
               operations and drive growth.
             </p>
 

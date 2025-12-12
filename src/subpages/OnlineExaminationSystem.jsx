@@ -313,7 +313,7 @@ export default function ExamPlatformLanding() {
                 scalable, and more efficient testing process.
               </p>
               <p className="text-sm text-center" style={{ color: "black" }}>
-                Multigraphics' Online Exam system supports multiple question
+                PK Solutions' Online Exam system supports multiple question
                 formats including MCQs and descriptive responses, allows
                 randomization, sectional timing, and instant result processing.
                 It ensures real-time monitoring, browser lockdown, and

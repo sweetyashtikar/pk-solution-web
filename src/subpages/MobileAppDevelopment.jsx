@@ -258,7 +258,7 @@ export default function MobileAppDevelopment() {
                 </h1>
 
                 <p>
-                  At Multigraphics, we are committed to delivering high-quality
+                  At Pk Solution, we are committed to delivering high-quality
                   mobile applications for both Android and iOS platforms. Our
                   expert team transforms your ideas into scalable, secure, and
                   engaging mobile solutions that drive real business results.
@@ -446,77 +446,7 @@ export default function MobileAppDevelopment() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      {/* <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-teal-900 mb-4">
-            Why Clients Choose Multigraphics for Android & iOS Apps
-          </h2>
-          <p className="text-xl text-gray-600 mb-16">
-            Transform User Engagement with Feature-Rich, Future-Ready Mobile
-            Apps
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "💡",
-                number: "1",
-                title: "Expertise in Android & iOS Development",
-                desc: "Our team specializes in building high-performance apps for both platforms using the latest technologies",
-              },
-              {
-                icon: "🎯",
-                number: "2",
-                title: "Custom Solutions Tailored to Your Needs",
-                desc: "We don't use one-size-fits-all templates, every app is designed to meet your specific goals.",
-              },
-              {
-                icon: "🎨",
-                number: "3",
-                title: "UI/UX-First Approach",
-                desc: "We prioritize user experience with intuitive, modern, and responsive app designs.",
-              },
-              {
-                icon: "⚙️",
-                number: "4",
-                title: "Agile Development Process",
-                desc: "Fast, flexible, and transparent workflows that keep you involved every step of the way.",
-              },
-              {
-                icon: "🔧",
-                number: "5",
-                title: "App Store & Play Store Success",
-                desc: "We ensure your app meets all guidelines and is fully optimized for visibility and downloads.",
-              },
-              {
-                icon: "🔄",
-                number: "6",
-                title: "Post-Launch Support & Maintenance",
-                desc: "From updates to scaling, we stay with you even after your app goes live.",
-              },
-            ].map((reason, idx) => (
-              <div
-                key={idx}
-                className="relative bg-gradient-to-br from-teal-50 to-white border-2 border-teal-200 rounded-3xl p-8 hover:shadow-2xl transition-all"
-              >
-                <div className="absolute -top-4 -right-4 text-8xl font-bold text-teal-100 opacity-50">
-                  {reason.number}
-                </div>
-                <div className="relative">
-                  <div className="w-16 h-16 bg-teal-700 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                    {reason.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-teal-900 mb-3">
-                    {reason.title}
-                  </h3>
-                  <p className="text-gray-600 text-lg">{reason.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+   
 
       {/* CTA Section */}
       <div className="w-full bg-white py-20 flex flex-col items-center text-center px-4">
@@ -614,7 +544,7 @@ function MultigraphicsSection() {
             </h2>
 
             <p className="text-lg text-gray-700 mb-4">
-              At Multigraphics, we specialize in creating high-performance
+              At Pk Solution, we specialize in creating high-performance
               mobile applications tailored to your business needs. Whether
               you're launching a consumer app, an internal business tool, or an
               education-based solution, our team delivers seamless experiences

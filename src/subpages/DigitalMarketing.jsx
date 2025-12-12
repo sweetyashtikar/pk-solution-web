@@ -119,7 +119,7 @@ export default function DigitalMarketing() {
             </h1>
 
             <p className="text-lg leading-relaxed mb-8 font-medium text-gray-800">
-              Get more traffic, qualified leads, and sales with Multigraphics -
+              Get more traffic, qualified leads, and sales with PK Solutions -
               India's leading digital marketing company offering SEO, PPC,
               social media marketing, and more.
             </p>
@@ -286,7 +286,7 @@ export default function DigitalMarketing() {
             {/* LEFT CONTENT */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-white text-center">
-                Why Choose Multigraphics for Digital Marketing?
+                Why Choose PK Solutions for Digital Marketing?
               </h2>
 
               <p className="text-base md:text-lg text-white/90 leading-relaxed text-center">
@@ -392,7 +392,7 @@ function AboutMultigraphics() {
             </h2>
 
             <p className="text-gray-700 text-lg mb-4 text-center">
-              Multigraphics is a leading provider of digital marketing services
+              PK Solutions is a leading provider of digital marketing services
               in India, helping brands improve their online visibility, generate
               quality leads, and drive website traffic through customized
               strategies.
@@ -407,7 +407,7 @@ function AboutMultigraphics() {
 
             <p className="text-gray-700 text-lg text-center">
               Whether you aim to rank higher on Google, engage your audience, or
-              boost conversions, Multigraphics is your trusted digital growth
+              boost conversions, PK Solutions is your trusted digital growth
               partner.
             </p>
           </div>

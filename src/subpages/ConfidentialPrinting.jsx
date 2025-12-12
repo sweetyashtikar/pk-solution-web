@@ -4,7 +4,7 @@ import { Plus, Minus } from "lucide-react";
 import { Link } from "react-router-dom";
 const faqs = [
   {
-    q: "How does Multigraphics ensure document security?",
+    q: "How does PK Solutions ensure document security?",
     a: "We operate from ISO-certified secure facilities with biometric access controls, CCTV surveillance, and data encryption protocols throughout the printing and dispatch workflow to ensure complete confidentiality.",
   },
   {

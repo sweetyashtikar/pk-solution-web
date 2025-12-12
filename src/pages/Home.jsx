@@ -289,9 +289,8 @@ export default function TechOnTime() {
             </p>
 
             <p className="mt-2 text-gray-200 text-[15px] leading-relaxed">
-              Multigraphics Group builds scalable solutions across EdTech,
-              training, software development, mobile apps, digital marketing,
-              and exam tech.
+              PK Solutions Group builds scalable solutions across EdTech,
+              training, and exam tech.
             </p>
 
             <p className="mt-2 text-gray-200 text-[15px] leading-relaxed">

@@ -381,62 +381,58 @@ export default function OMRScanning() {
 
 function WhatIsOMR() {
   return (
-<section
-  className="py-12 px-4 sm:px-6 lg:px-8"
-  style={{ backgroundColor: "#1a498b" }}
->
-  <div className="max-w-7xl mx-auto"> 
-    <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section
+      className="py-12 px-4 sm:px-6 lg:px-8"
+      style={{ backgroundColor: "#1a498b" }}
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* LEFT SIDE CARD */}
+          <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 text-center mx-auto max-w-xl">
+            <h2
+              className="text-3xl md:text-4xl font-extrabold mb-6"
+              style={{ color: "#1a498b" }}
+            >
+              What is OMR Scanning & Result Processing?
+            </h2>
 
-      {/* LEFT SIDE CARD */}
-      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 text-center mx-auto max-w-xl">
-        <h2
-          className="text-3xl md:text-4xl font-extrabold mb-6"
-          style={{ color: "#1a498b" }}
-        >
-          What is OMR Scanning & Result Processing?
-        </h2>
+            <p className="text-lg mb-4" style={{ color: "black" }}>
+              OMR Scanning (Optical Mark Recognition) is the process of
+              capturing marked data from OMR sheets used in exams, surveys, and
+              evaluations.
+            </p>
 
-        <p className="text-lg mb-4" style={{ color: "black" }}>
-          OMR Scanning (Optical Mark Recognition) is the process of capturing
-          marked data from OMR sheets used in exams, surveys, and evaluations.
-        </p>
+            <p className="text-lg mb-4" style={{ color: "black" }}>
+              Candidates fill bubbles, which are then scanned using OMR software
+              or scanners to read responses with high accuracy.
+            </p>
 
-        <p className="text-lg mb-4" style={{ color: "black" }}>
-          Candidates fill bubbles, which are then scanned using OMR software or
-          scanners to read responses with high accuracy.
-        </p>
+            <p className="text-lg mb-4" style={{ color: "black" }}>
+              Result Processing evaluates these responses to generate
+              scorecards, merit lists, rankings, and analytics.
+            </p>
 
-        <p className="text-lg mb-4" style={{ color: "black" }}>
-          Result Processing evaluates these responses to generate scorecards,
-          merit lists, rankings, and analytics.
-        </p>
+            <p className="text-lg" style={{ color: "black" }}>
+              Ideal for schools, universities, recruitment exams, and government
+              assessments.
+            </p>
+          </div>
 
-        <p className="text-lg" style={{ color: "black" }}>
-          Ideal for schools, universities, recruitment exams, and government
-          assessments.
-        </p>
+          {/* RIGHT SIDE IMAGE */}
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900"
+                alt="OMR Scanning Process"
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a498b]/30 to-transparent rounded-2xl"></div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* RIGHT SIDE IMAGE */}
-   <div className="flex justify-center">
-  <div className="relative w-full max-w-2xl"> 
-    <img
-      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900"
-      alt="OMR Scanning Process"
-      className="rounded-2xl shadow-2xl w-full h-auto"
-    />
-
-    <div className="absolute inset-0 bg-gradient-to-t from-[#1a498b]/30 to-transparent rounded-2xl"></div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-
-
+    </section>
   );
 }
 
@@ -501,11 +497,11 @@ function MultigraphicsSection() {
 
           <div className="text-center mx-auto">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-[#1a498b]">
-              Multigraphics: OMR Sheet Checking & Evaluation System
+              PK Solutions: OMR Sheet Checking & Evaluation System
             </h2>
 
             <p className="text-lg text-gray-700 mb-4">
-              Multigraphics offers high-speed OMR scanning and result processing
+              PK Solutions offers high-speed OMR scanning and result processing
               solutions trusted by schools, universities, recruitment boards,
               and government organizations.
             </p>
